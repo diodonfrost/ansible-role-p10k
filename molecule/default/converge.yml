@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include ansible-role-p10k"
+      include_role:
+        name: "ansible-role-p10k"
