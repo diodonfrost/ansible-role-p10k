@@ -9,7 +9,7 @@ driver:
   name: docker
 platforms:
   - name: linux
-    image: diodonfrost/${image:-ansible-centos:8}
+    image: diodonfrost/${image:-ansible-centos:7}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
       - /dev/fuse:/dev/fuse

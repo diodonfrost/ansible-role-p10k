@@ -2,7 +2,26 @@
 - name: Verify
   hosts: all
   tasks:
+    - name: Linux | p10k config file should be present
+      stat:
+        path: ~/.p10k.zsh
+      register: p10k_configfile_result
+
+    - name: zsh | p10k theme file should be present
+      stat:
+        path: ~/powerlevel10k/powerlevel10k.zsh-theme
+      register: p10k_themefile_result
+      when: lookup('env', 'zsh_plugin') == "zsh"
+
+    - name: ohmyzsh | p10k theme file should be present
+      stat:
+        path: ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+      register: p10k_themefile_result
+      when: lookup('env', 'zsh_plugin') == "ohmyzsh"
+
     - name: Linux | Verify commands outputs
       assert:
         that:
+          - p10k_configfile_result.stat.exists
+          - p10k_themefile_result.stat.exists
         success_msg: "All tests passed"

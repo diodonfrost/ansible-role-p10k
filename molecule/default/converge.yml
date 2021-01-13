@@ -5,3 +5,5 @@
     - name: "Include ansible-role-p10k"
       include_role:
         name: "ansible-role-p10k"
+      vars:
+        zsh_plugin: "{{ lookup('env', 'zsh_plugin') | | default('zsh', true) }}"
