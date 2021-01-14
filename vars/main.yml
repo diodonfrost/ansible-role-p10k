@@ -1,2 +1,9 @@
 ---
-# vars file for ansible-role-p10k
+# Global vars file for ansible-role-p10k
+p10k_path:
+  zsh: '~/powerlevel10k'
+  ohmyzsh: '~/.oh-my-zsh/custom/themes/powerlevel10k'
+
+p10k_zshrc_config:
+  zsh: 'source ~/powerlevel10k/powerlevel10k.zsh-theme'
+  ohmyzsh: 'ZSH_THEME="powerlevel10k/powerlevel10k"'

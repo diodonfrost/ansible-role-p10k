@@ -1,0 +1,4 @@
+---
+p10k_dependencies:
+  - zsh
+  - git

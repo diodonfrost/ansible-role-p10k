@@ -1,2 +1,8 @@
 ---
 # tasks file for ansible-role-p10k
+
+- name: Include OS specific variables.
+  include_vars: "{{ ansible_system }}.yml"
+
+- name: Install p10k
+  include_tasks: "p10k-install.yml"

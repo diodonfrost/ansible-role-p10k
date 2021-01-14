@@ -1,0 +1,41 @@
+---
+# Install powerlevel10k
+- name: Ensure dependencies are installed.
+  package:
+    name: "{{ p10k_dependencies }}"
+    state: present
+
+- name: Install powerlevel10k.
+  git:
+    repo: "{{ p10k_repository_url }}"
+    dest: "{{ p10k_path[zsh_plugin] | default('~/powerlevel10k', True) }}"
+    depth: '1'
+    update: no
+    version: 'master'
+  become: yes
+  become_user: "{{ item }}"
+  with_items: "{{ p10k_users }}"
+
+- name: Create .zshrc if it doesn't exist already
+  copy:
+    content: ""
+    dest: '~/.zshrc'
+    owner: "{{ item }}"
+    group: "{{ item }}"
+    mode: '0644'
+    force: no
+  become: yes
+  become_user: "{{ item }}"
+  with_items: "{{ p10k_users }}"
+
+- name: Add powerlevel10k to zsh plugin
+  lineinfile:
+    path: '~/.zshrc'
+    regexp: "^{{ p10k_zshrc_config[zsh_plugin] }}"
+    line: "{{ p10k_zshrc_config[zsh_plugin] }}"
+    owner: "{{ item }}"
+    group: "{{ item }}"
+    mode: '0644'
+  become: yes
+  become_user: "{{ item }}"
+  with_items: "{{ p10k_users }}"
