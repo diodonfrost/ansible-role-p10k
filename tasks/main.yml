@@ -6,3 +6,6 @@
 
 - name: Install p10k
   include_tasks: "p10k-install.yml"
+
+- name: Install p10k recommanded fonts
+  include_tasks: "p10k-fonts.yml"

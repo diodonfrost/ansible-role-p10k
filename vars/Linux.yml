@@ -2,3 +2,5 @@
 p10k_dependencies:
   - zsh
   - git
+
+fonts_path: /usr/share/fonts/TTF
