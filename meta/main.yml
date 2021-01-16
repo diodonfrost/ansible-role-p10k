@@ -9,8 +9,6 @@ galaxy_info:
     - name: EL
       versions:
         - 8
-        - 7
-        - 6
     - name: Fedora
       versions:
         - all
@@ -18,34 +16,20 @@ galaxy_info:
       versions:
         - buster
         - stretch
-        - jessie
     - name: Ubuntu
       versions:
         - focal
         - bionic
         - xenial
-        - trusty
     - name: Amazon
       versions:
         - 2017.12
-        - 2016.03
     - name: opensuse
       versions:
         - 15.2
         - 15.1
         - 15.0
-        - 42.2
-        - 42.1
     - name: ArchLinux
-      versions:
-        - any
-    - name: Alpine
-      versions:
-        - any
-    - name: Gentoo
-      versions:
-        - any
-    - name: ClearLinux
       versions:
         - any
 

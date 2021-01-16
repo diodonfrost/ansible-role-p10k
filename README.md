@@ -1,38 +1,106 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Ansible role for install powerlevel10k, Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+None.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Available variables are listed below, along with default values (see `defaults/main.yml`):
+
+```yaml
+# defaults file for ansible-role-p10k
+
+# Powerlevel10k Git repository url
+p10k_repository_url: 'https://github.com/romkatv/powerlevel10k.git'
+
+# Install p10k for the following linux users
+# Default: the linux running Ansible
+p10k_users:
+  - "{{ ansible_user_id }}"
+
+# Zsh plugin used, zsh, ohmyzsh, prezto, Zim, etc..
+# All plugins name can be found here https://github.com/romkatv/powerlevel10k#installation
+zsh_plugin: zsh
+
+# Download p10k recommanded fonts from this urls
+p10k_font_urls:
+  - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf', name: 'Hack-Italic.ttf' }
+  - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf', name: 'Hack-Bold.ttf' }
+  - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf', name: 'Hack-BoldItalic.ttf' }
+  - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf', name: 'Hack-Regular.ttf' }
+```
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+Install powerlevel10K:
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: diodonfrost.p10k }
+
+Install powerlevel10k for ohmyzsh:
+
+    - hosts: servers
+      roles:
+         - { role: diodonfrost.p10k, zsh_plugin: ohmyzsh }
+
+Local Testing
+-------------
+
+This project uses [Molecule](http://molecule.readthedocs.io/) to aid in the
+development and testing.
+
+To develop or test you'll need to have installed the following:
+
+* Linux (e.g. [Ubuntu](http://www.ubuntu.com/))
+* [Docker](https://www.docker.com/)
+* [Python](https://www.python.org/) (including python-pip)
+* [Ansible](https://www.ansible.com/)
+* [Molecule](http://molecule.readthedocs.io/)
+
+### Testing with Docker ###
+
+```shell
+# Install requirements
+pip install -r requirements-dev.txt
+
+# Test ansible role with ubuntu 20.04
+molecule test
+
+# Test ansible role with centos 8
+image=ansible-centos:8 molecule test
+
+# Test ansible role with alpine-latest
+image=ansible-alpine:latest molecule test
+
+# Create ubuntu 20.048 instance
+molecule create
+
+# Apply role on ubuntu 20.04 instance
+molecule converge
+
+# Launch tests on centos-7 instance
+molecule verify
+```
 
 License
 -------
 
-BSD
+Apache 2
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+This role was created in 2021 by diodonfrost.

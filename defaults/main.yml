@@ -13,7 +13,7 @@ p10k_users:
 # All plugins name can be found here https://github.com/romkatv/powerlevel10k#installation
 zsh_plugin: zsh
 
-# Download p10k recommanded from this urls
+# Download p10k recommanded fonts from this urls
 p10k_font_urls:
   - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf', name: 'Hack-Italic.ttf' }
   - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf', name: 'Hack-Bold.ttf' }
