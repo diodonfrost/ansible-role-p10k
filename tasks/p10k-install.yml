@@ -39,3 +39,14 @@
   become: yes
   become_user: "{{ item }}"
   with_items: "{{ p10k_users }}"
+
+- name: Enable powerlevel10 instant prompt
+  blockinfile:
+    path: '~/.zshrc'
+    block: |
+      if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+        source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+      fi
+    insertbefore: BOF
+    marker_begin: "BEGIN P10K INSTANT PROMPT"
+    marker_end: "END P10K INSTANT PROMPT"

@@ -1,0 +1,29 @@
+---
+- name: Set zsh as default shell
+  user:
+    name: "{{ item }}"
+    shell: /bin/zsh
+  become: yes
+  become_user: "{{ item }}"
+  with_items: "{{ p10k_users }}"
+
+- name: Copy default p10k config
+  copy:
+    src: p10k.zsh
+    dest: '~/.p10k.zsh'
+    owner: "{{ item }}"
+    group: "{{ item }}"
+    mode: '0644'
+    force: no
+  become: yes
+  become_user: "{{ item }}"
+  with_items: "{{ p10k_users }}"
+
+- name: Enable powerlevel10 config file
+  blockinfile:
+    path: '~/.zshrc'
+    block: |
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+    insertafter: EOF
+    marker_begin: "BEGIN P10K CONFIG FILE"
+    marker_end: "END P10K CONFIG FILE"
