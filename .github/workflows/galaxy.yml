@@ -1,0 +1,17 @@
+name: galaxy
+
+on:
+  push:
+    tags:
+      - '*'
+  schedule:
+    - cron: '0 18 * * sun'
+
+jobs:
+  release:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Release to Ansible Galaxy
+        uses: robertdebock/galaxy-action@1.1.0
+        with:
+          galaxy_api_key: ${{ secrets.galaxy_api_key }}

@@ -1,0 +1,63 @@
+name: molecule
+
+on:
+  push:
+  pull_request: 
+  schedule:
+    - cron: '0 18 * * sun'
+
+jobs:
+  build:
+    name: ${{ matrix.image }} zsh_plugin ${{ matrix.zsh_plugin }}
+    runs-on: ubuntu-18.04
+    strategy:
+      fail-fast: false
+      matrix:
+        image:
+          - centos:8
+          - fedora:32
+          - fedora:31
+          - fedora:30
+          - fedora:29
+          - fedora:28
+          - fedora:27
+          - fedora:26
+          - ubuntu:20.04
+          - ubuntu:18.04
+          - ubuntu:16.04
+          - debian:10
+          - debian:9
+          - oraclelinux:8
+          - amazonlinux:2
+          - opensuse:leap
+          - opensuse:tumbleweed
+          - archlinux:latest
+        zsh_plugin:
+          - zsh
+          - ohmyzsh
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install Molecule
+        run: |
+          python -m pip install --upgrade pip
+          pip install ansible ansible-lint molecule-docker docker
+
+      - name: Test Ansible role
+        run: molecule test
+        env:
+          image: ansible-${{ matrix.image }}
+          zsh_plugin: ${{ matrix.terraform_version }}
+
+      - name: Test Ansible role with check_mode enable
+        run: molecule check
+        env:
+          image: ansible-${{ matrix.image }}
+          zsh_plugin: ${{ matrix.terraform_version }}
