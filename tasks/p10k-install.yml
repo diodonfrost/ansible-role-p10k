@@ -7,6 +7,8 @@
 
 - name: Get ZSH version
   shell: "set -o pipefail; zsh --version | cut -d ' ' -f2 | cut -c1-3"
+  args:
+    executable: /bin/bash
   check_mode: no
   changed_when: false
   register: zsh_version
@@ -14,7 +16,7 @@
 - name: Powerlevel10k works only with ZSH >= 5.1
   fail:
     msg: "You are using ZSH version {{ zsh_version.stdout }}. The minimum required version for Powerlevel10k is 5.1"
-  when: zsh_version.stdout|float <= 5.1
+  when: zsh_version.stdout|float < 5.1
 
 - name: Install powerlevel10k.
   git:
