@@ -2,5 +2,7 @@
 p10k_dependencies:
   - zsh
   - git
+  - wget
+  - curl
 
 fonts_path: /usr/share/fonts/TTF
