@@ -20,12 +20,12 @@ Available variables are listed below, along with default values (see `defaults/m
 p10k_repository_url: 'https://github.com/romkatv/powerlevel10k.git'
 
 # Install p10k for the following linux users
-# Default: the linux running Ansible
+# Default: the linux user running Ansible
 p10k_users:
   - "{{ ansible_user_id }}"
 
 # Zsh plugin used, zsh, ohmyzsh, prezto, Zim, etc..
-# All plugins name can be found here https://github.com/romkatv/powerlevel10k#installation
+# All plugin names can be found here https://github.com/romkatv/powerlevel10k#installation
 zsh_plugin: zsh
 
 # Download p10k recommanded fonts from this urls
