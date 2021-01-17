@@ -29,18 +29,6 @@
   become_user: "{{ item }}"
   with_items: "{{ p10k_users }}"
 
-- name: Create .zshrc if it doesn't exist already
-  copy:
-    content: ""
-    dest: '~/.zshrc'
-    owner: "{{ item }}"
-    group: "{{ item }}"
-    mode: '0644'
-    force: no
-  become: yes
-  become_user: "{{ item }}"
-  with_items: "{{ p10k_users }}"
-
 - name: Add powerlevel10k to zsh plugin
   lineinfile:
     path: '~/.zshrc'
@@ -49,6 +37,7 @@
     owner: "{{ item }}"
     group: "{{ item }}"
     mode: '0644'
+    create: yes
   become: yes
   become_user: "{{ item }}"
   with_items: "{{ p10k_users }}"
