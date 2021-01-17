@@ -21,7 +21,7 @@
 
 - name: Enable powerlevel10 config file
   blockinfile:
-    path: '~/.zshrc'
+    path: "{{ p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
     block: |
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     insertafter: EOF

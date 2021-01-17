@@ -31,9 +31,9 @@
 
 - name: Add powerlevel10k to zsh plugin
   lineinfile:
-    path: '~/.zshrc'
-    regexp: "^{{ p10k_zshrc_config[zsh_plugin] }}"
-    line: "{{ p10k_zshrc_config[zsh_plugin] }}"
+    path: "{{ p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
+    regexp: "^{{ p10k_zshrc_config[zsh_plugin]['source'] }}"
+    line: "{{ p10k_zshrc_config[zsh_plugin]['source'] }}"
     owner: "{{ item }}"
     group: "{{ item }}"
     mode: '0644'
@@ -44,7 +44,7 @@
 
 - name: Enable powerlevel10 instant prompt
   blockinfile:
-    path: '~/.zshrc'
+    path: "{{ p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
     block: |
       if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
         source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"

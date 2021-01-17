@@ -5,5 +5,33 @@ p10k_path:
   ohmyzsh: '~/.oh-my-zsh/custom/themes/powerlevel10k'
 
 p10k_zshrc_config:
-  zsh: 'source ~/powerlevel10k/powerlevel10k.zsh-theme'
-  ohmyzsh: 'ZSH_THEME="powerlevel10k/powerlevel10k"'
+  zsh:
+   source: 'source ~/powerlevel10k/powerlevel10k.zsh-theme'
+   zsh_file: ~/.zshrc
+  ohmyzsh:
+    source: 'ZSH_THEME="powerlevel10k/powerlevel10k"'
+    zsh_file: ~/.zshrc
+  prezto:
+    source: 'zstyle :prezto:module:prompt theme powerlevel10k'
+    zsh_file: ~/.zpreztorc
+  zim:
+    source: 'zmodule romkatv/powerlevel10k'
+    zsh_file: ~/.zimrc
+  antibody:
+    source: 'antibody bundle romkatv/powerlevel10k'
+    zsh_file: ~/.zshrc
+  antigen:
+    source: 'antigen theme romkatv/powerlevel10k'
+    zsh_file: ~/.zshrc
+  zplug:
+    source: 'zplug romkatv/powerlevel10k, as:theme, depth:1'
+    zsh_file: ~/.zshrc
+  zgen:
+    source: 'zgen load romkatv/powerlevel10k powerlevel10k'
+    zsh_file: ~/.zshrc
+  zplugin:
+    source: 'zplugin ice depth=1; zplugin light romkatv/powerlevel10k'
+    zsh_file: ~/.zshrc
+  zinit:
+    source: 'zinit ice depth=1; zinit light romkatv/powerlevel10k'
+    zsh_file: ~/.zshrc
