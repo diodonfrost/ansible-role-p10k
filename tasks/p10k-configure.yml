@@ -2,7 +2,7 @@
 - name: Set zsh as default shell
   user:
     name: "{{ item }}"
-    shell: /bin/zsh
+    shell: "{{ zsh_bin_path }}"
   become: yes
   become_user: "{{ item }}"
   with_items: "{{ p10k_users }}"
