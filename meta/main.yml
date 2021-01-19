@@ -32,6 +32,9 @@ galaxy_info:
     - name: ArchLinux
       versions:
         - any
+    - name: MacOSX
+      versions:
+        - all
 
   galaxy_tags:
     - zsh

@@ -2,8 +2,6 @@
 - name: Create fonts directory
   file:
     path: "{{ fonts_path }}"
-    owner: root
-    group: root
     mode: '0755'
     state: directory
 
@@ -11,7 +9,5 @@
   get_url:
     url: "{{ item.url }}"
     dest: "{{ fonts_path }}/{{ item.name }}"
-    owner: root
-    group: root
     mode: '0644'
   loop: "{{ p10k_font_urls }}"

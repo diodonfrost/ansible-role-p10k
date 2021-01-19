@@ -4,6 +4,7 @@
   package:
     name: "{{ p10k_dependencies }}"
     state: present
+  when: p10k_dependencies
 
 - name: Get ZSH version
   shell: "set -o pipefail; zsh --version | cut -d ' ' -f2 | cut -c1-3"
@@ -34,8 +35,6 @@
     path: "{{ p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
     regexp: "{{ p10k_zshrc_config[zsh_plugin]['regexp'] }}"
     line: "{{ p10k_zshrc_config[zsh_plugin]['line'] }}"
-    owner: "{{ item }}"
-    group: "{{ item }}"
     mode: '0644'
     create: yes
   become: yes

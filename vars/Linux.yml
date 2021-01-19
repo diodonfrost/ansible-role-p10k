@@ -6,5 +6,4 @@ p10k_dependencies:
   - curl
 
 fonts_path: /usr/share/fonts/TTF
-
 zsh_bin_path: /usr/bin/zsh

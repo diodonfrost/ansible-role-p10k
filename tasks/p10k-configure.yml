@@ -11,8 +11,6 @@
   copy:
     src: p10k.zsh
     dest: '~/.p10k.zsh'
-    owner: "{{ item }}"
-    group: "{{ item }}"
     mode: '0644'
     force: no
   become: yes
