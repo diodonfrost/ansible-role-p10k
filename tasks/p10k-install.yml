@@ -51,3 +51,12 @@
     insertbefore: BOF
     marker_begin: "BEGIN P10K INSTANT PROMPT"
     marker_end: "END P10K INSTANT PROMPT"
+
+- name: Enable powerlevel10k config file
+  blockinfile:
+    path: "{{ p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
+    block: |
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+    insertafter: EOF
+    marker_begin: "BEGIN P10K CONFIG FILE"
+    marker_end: "END P10K CONFIG FILE"

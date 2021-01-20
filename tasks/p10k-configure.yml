@@ -7,21 +7,11 @@
   become_user: "{{ item }}"
   with_items: "{{ p10k_users }}"
 
-- name: Copy default p10k config
-  copy:
-    src: p10k.zsh
+- name: Setup powerlevel10k
+  template:
+    src: p10k.zsh.j2
     dest: '~/.p10k.zsh'
     mode: '0644'
-    force: no
   become: yes
   become_user: "{{ item }}"
   with_items: "{{ p10k_users }}"
-
-- name: Enable powerlevel10 config file
-  blockinfile:
-    path: "{{ p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
-    block: |
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-    insertafter: EOF
-    marker_begin: "BEGIN P10K CONFIG FILE"
-    marker_end: "END P10K CONFIG FILE"

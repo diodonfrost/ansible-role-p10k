@@ -1,7 +1,7 @@
 Role Name
 =========
 
-Ansible role for install powerlevel10k, Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
+Ansible role that installs [powerlevel10k](https://github.com/romkatv/powerlevel10k), Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 
 Requirements
 ------------
@@ -14,6 +14,7 @@ Role Variables
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
 ```yaml
+---
 # defaults file for ansible-role-p10k
 
 # Powerlevel10k Git repository url
@@ -34,6 +35,34 @@ p10k_font_urls:
   - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf', name: 'Hack-Bold.ttf' }
   - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf', name: 'Hack-BoldItalic.ttf' }
   - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf', name: 'Hack-Regular.ttf' }
+
+# Show current time
+# Valid values: no, 24-hour
+p10k_prompt_time: "no"
+
+# Terminal prompt height
+# Valid values: one-line, two-lines
+p10k_prompt_height: two-lines
+
+# Prompt connection, only used if "p10k_prompt_height" value is "two-lines"
+# Valid values: disconnected, dotted, solid
+p10k_prompt_connection: disconnected
+
+# Prompt connection color, only used if "p10k_prompt_connection" value is "dotted" or "solid"
+# Valid values: false, black, white, green, blue
+p10k_prompt_connection_color: "no"
+
+# Sparse prompt with an empty line before promp
+# Valid values: compact, sparse
+p10k_prompt_spacing: compact
+
+# Terminal flow
+# Valid values: concise, fluent
+p10k_prompt_flow: concise
+
+# Enable transient prompt
+# Valid values: yes, no
+p10k_transient_prompt: "no"
 ```
 
 Dependencies
