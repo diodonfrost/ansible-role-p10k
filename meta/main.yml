@@ -35,6 +35,15 @@ galaxy_info:
     - name: MacOSX
       versions:
         - all
+    - name: FreeBSD
+      versions:
+        - 11.2
+        - 10.4
+        - 10.3
+    - name: OpenBSD
+      versions:
+        - 6.0
+        - 6.4
 
   galaxy_tags:
     - zsh
