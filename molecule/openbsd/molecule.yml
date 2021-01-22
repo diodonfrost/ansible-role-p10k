@@ -1,0 +1,11 @@
+---
+driver:
+  name: vagrant
+  provider:
+    name: VBox
+platforms:
+  - name: openbsd
+    box: generic/openbsd6
+    box_version: "3.0.26"
+    memory: 1024
+    cpus: 2
