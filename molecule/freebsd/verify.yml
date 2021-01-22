@@ -1,0 +1,28 @@
+---
+- name: Verify
+  hosts: all
+  become: yes
+  tasks:
+    - name: Get custom ansible role variables
+      set_fact:
+        zsh_plugin: "{{ lookup('env', 'zsh_plugin') | default('zsh', True) }}"
+        p10k_path:
+          zsh: '~/powerlevel10k'
+          ohmyzsh: '~/.oh-my-zsh/custom/themes/powerlevel10k'
+
+    - name: FreeBSD | p10k config file should be present
+      stat:
+        path: ~/.p10k.zsh
+      register: p10k_configfile_result
+
+    - name: FreeBSD | p10k theme file should be present
+      stat:
+        path: "{{ p10k_path[zsh_plugin] }}"
+      register: p10k_themefile_result
+
+    - name: FreeBSD | Verify commands outputs
+      assert:
+        that:
+          - p10k_configfile_result.stat.exists
+          - p10k_themefile_result.stat.exists
+        success_msg: "All tests passed"

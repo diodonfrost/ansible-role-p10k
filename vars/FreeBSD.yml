@@ -1,0 +1,9 @@
+---
+p10k_dependencies:
+  - zsh
+  - git
+  - wget
+  - curl
+
+fonts_path: /usr/local/share/fonts/TTF
+zsh_bin_path: /usr/local/bin/zsh

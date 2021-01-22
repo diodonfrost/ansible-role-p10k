@@ -1,0 +1,9 @@
+---
+- name: Prepare
+  hosts: all
+  become: yes
+  tasks:
+    - name: FreeBSD | Install Ansible requirements
+      pkgng:
+        name: gtar, unzip
+        state: present
