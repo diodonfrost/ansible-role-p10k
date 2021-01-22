@@ -1,5 +1,5 @@
-Role Name
-=========
+Ansible Role: p10k
+==================
 
 Ansible role that installs [powerlevel10k](https://github.com/romkatv/powerlevel10k), Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 
@@ -111,16 +111,16 @@ molecule test
 # Test ansible role with centos 8
 image=ansible-centos:8 molecule test
 
-# Test ansible role with alpine-latest
-image=ansible-alpine:latest molecule test
+# Test ansible role with archlinux latest
+image=ansible-archlinux:latest molecule test
 
-# Create ubuntu 20.048 instance
+# Create ubuntu 20.04 instance
 molecule create
 
 # Apply role on ubuntu 20.04 instance
 molecule converge
 
-# Launch tests on centos-7 instance
+# Launch tests on 20.04 instance
 molecule verify
 ```
 
