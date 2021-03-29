@@ -1,6 +1,9 @@
 Ansible Role: p10k
 ==================
 
+[![molecule](https://github.com/diodonfrost/ansible-role-p10k/workflows/molecule/badge.svg)](https://github.com/diodonfrost/ansible-role-p10k/actions)
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-diodonfrost.p10k-660198.svg)](https://galaxy.ansible.com/diodonfrost/p10k)
+
 Ansible role that installs [powerlevel10k](https://github.com/romkatv/powerlevel10k), Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.
 
 Requirements
