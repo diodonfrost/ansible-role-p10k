@@ -21,8 +21,8 @@ p10k_font_urls:
   - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf', name: 'Hack-Regular.ttf' }
 
 # Show current time
-# Valid values: no, 24-hour
-p10k_prompt_time: "no"
+# Valid values: no, 24-hour, 12-hour
+p10k_prompt_time: "24-hour"
 
 # Terminal prompt height
 # Valid values: one-line, two-lines
