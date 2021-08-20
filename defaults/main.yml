@@ -28,13 +28,19 @@ p10k_prompt_time: "no"
 # Valid values: one-line, two-lines
 p10k_prompt_height: two-lines
 
+# Prompt frame connection
+# Valid values: no, left, right, full
+p10k_prompt_frame: left
+
 # Prompt connection, only used if "p10k_prompt_height" value is "two-lines"
 # Valid values: disconnected, dotted, solid
 p10k_prompt_connection: disconnected
 
-# Prompt connection color, only used if "p10k_prompt_connection" value is "dotted" or "solid"
-# Valid values: false, black, white, green, blue
-p10k_prompt_connection_color: "no"
+# Prompt connection color, only used if
+# "p10k_prompt_connection" value is "dotted" or "solid"
+# or "p10k_prompt_frame" is not "no"
+# Valid values: black, white, green, blue
+p10k_prompt_connection_color: "green"
 
 # Sparse prompt with an empty line before promp
 # Valid values: compact, sparse

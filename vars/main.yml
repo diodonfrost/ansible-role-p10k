@@ -53,3 +53,47 @@ p10k_zshrc_config:
     regexp: '^zinit ice depth=1; zinit light'
     line: 'zinit ice depth=1; zinit light romkatv/powerlevel10k'
     zsh_file: ~/.zshrc
+
+color_config:
+  black: '0'
+  white: '7'
+  green: '2'
+  blue: '4'
+
+frame_config:
+  'no':
+    FIRST_PREFIX: ''
+    NEWLINE_PREFIX: ''
+    LAST_PREFIX: ''
+    FIRST_SUFFIX: ''
+    NEWLINE_SUFFIX: ''
+    LAST_SUFFIX: ''
+    FIRST_START_SYMBOL: "' '"
+    LAST_START_SYMBOL: "' '"
+  'left':
+    FIRST_PREFIX: '%{{ color_config[p10k_prompt_connection_color] }}F╭─'
+    NEWLINE_PREFIX: '%{{ color_config[p10k_prompt_connection_color] }}F├─'
+    LAST_PREFIX: '%{{ color_config[p10k_prompt_connection_color] }}F╰─'
+    FIRST_SUFFIX: ''
+    NEWLINE_SUFFIX: ''
+    LAST_SUFFIX: ''
+    FIRST_START_SYMBOL: "' '"
+    LAST_START_SYMBOL: ''
+  'right':
+    FIRST_PREFIX: ''
+    NEWLINE_PREFIX: ''
+    LAST_PREFIX: ''
+    FIRST_SUFFIX: '%{{ color_config[p10k_prompt_connection_color] }}F─╮'
+    NEWLINE_SUFFIX: '%{{ color_config[p10k_prompt_connection_color] }}F─┤'
+    LAST_SUFFIX: '%{{ color_config[p10k_prompt_connection_color] }}F─╯'
+    FIRST_START_SYMBOL: ''
+    LAST_START_SYMBOL: "' '"
+  'full':
+    FIRST_PREFIX: '%{{ color_config[p10k_prompt_connection_color] }}F╭─'
+    NEWLINE_PREFIX: '%{{ color_config[p10k_prompt_connection_color] }}F├─'
+    LAST_PREFIX: '%{{ color_config[p10k_prompt_connection_color] }}F╰─'
+    FIRST_SUFFIX: '%{{ color_config[p10k_prompt_connection_color] }}F─╮'
+    NEWLINE_SUFFIX: '%{{ color_config[p10k_prompt_connection_color] }}F─┤'
+    LAST_SUFFIX: '%{{ color_config[p10k_prompt_connection_color] }}F─╯'
+    FIRST_START_SYMBOL: "' '"
+    LAST_START_SYMBOL: "' '"
