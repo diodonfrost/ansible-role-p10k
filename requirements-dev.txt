@@ -3,5 +3,6 @@ ansible-lint
 molecule-docker
 molecule-vagrant
 docker
+pre-commit
 python-vagrant
 pywinrm
