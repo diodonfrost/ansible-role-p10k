@@ -1,0 +1,18 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  tasks:
+    - name: "Include ansible-role-p10k"
+      include_role:
+        name: "ansible-role-p10k"
+      vars:
+        zsh_plugin: "{{ lookup('env', 'zsh_plugin') | default('zsh', True) }}"
+        p10k_prompt_time: "{{ lookup('env', 'p10k_prompt_time') | default('24-hour', True) }}"
+        p10k_prompt_height: "{{ lookup('env', 'p10k_prompt_height') | default('two-lines', True) }}"
+        p10k_prompt_frame: "{{ lookup('env', 'p10k_prompt_frame') | default('left', True) }}"
+        p10k_prompt_connection: "{{ lookup('env', 'p10k_prompt_connection') | default('disconnected', True) }}"
+        p10k_prompt_connection_color: "{{ lookup('env', 'p10k_prompt_connection_color') | default('green', True) }}"
+        p10k_prompt_spacing: "{{ lookup('env', 'p10k_prompt_spacing') | default('compact', True) }}"
+        p10k_prompt_flow: "{{ lookup('env', 'p10k_prompt_flow') | default('concise', True) }}"
+        p10k_transient_prompt: "{{ lookup('env', 'p10k_transient_prompt') | default('no', True) }}"

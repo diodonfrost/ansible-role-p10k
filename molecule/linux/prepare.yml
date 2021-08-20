@@ -1,0 +1,9 @@
+---
+- name: Prepare
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ubuntu/Debian | refresh apt repository
+      apt:
+        update_cache: yes
+      when: ansible_pkg_mgr == "apt"

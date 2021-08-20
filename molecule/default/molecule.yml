@@ -8,7 +8,7 @@ lint: |
 driver:
   name: docker
 platforms:
-  - name: linux
+  - name: default
     image: diodonfrost/${image:-ansible-ubuntu:20.04}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro

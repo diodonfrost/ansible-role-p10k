@@ -1,0 +1,10 @@
+---
+driver:
+  name: vagrant
+  provider:
+    name: VBox
+platforms:
+  - name: linux
+    box: ubuntu/focal64
+    memory: 1024
+    cpus: 2
