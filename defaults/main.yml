@@ -20,9 +20,17 @@ p10k_font_urls:
   - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf', name: 'Hack-BoldItalic.ttf' }
   - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf', name: 'Hack-Regular.ttf' }
 
+# Setup p10k theme to use
+# Valid values: lean, classic, rainbow, pure
+p10k_prompt_style: "lean"
+
 # Show current time
 # Valid values: no, 24-hour, 12-hour
 p10k_prompt_time: "24-hour"
+
+# Prompt sperator
+# Valid values: angled, vertical, slanted, round
+p10k_prompt_separator: "angled"
 
 # Terminal prompt height
 # Valid values: one-line, two-lines

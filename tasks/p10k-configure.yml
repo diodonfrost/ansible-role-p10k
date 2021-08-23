@@ -15,3 +15,14 @@
   become: yes
   become_user: "{{ item }}"
   with_items: "{{ p10k_users }}"
+  when: p10k_prompt_style == "lean"
+
+- name: Setup powerlevel10k
+  template:
+    src: p10k-rainbow.zsh.j2
+    dest: '~/.p10k.zsh'
+    mode: '0644'
+  become: yes
+  become_user: "{{ item }}"
+  with_items: "{{ p10k_users }}"
+  when: p10k_prompt_style != "lean"
