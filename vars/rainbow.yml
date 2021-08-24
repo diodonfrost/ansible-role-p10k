@@ -43,6 +43,23 @@ head_config:
     last: '\uE0B4'
     first: '\uE0B6'
 
+tails_config:
+  'flat':
+    START_SYMBOL: ''
+    END_SYMBOL: ''
+  'blurred':
+    START_SYMBOL: '░▒▓'
+    END_SYMBOL: '▓▒░'
+  'sharp':
+    START_SYMBOL: '\uE0B2'
+    END_SYMBOL: '\uE0B0'
+  'slanted':
+    START_SYMBOL: '\uE0BA'
+    END_SYMBOL: '\uE0BC'
+  'round':
+    START_SYMBOL: '\uE0B6'
+    END_SYMBOL: '\uE0B4'
+
 frame_config:
   'no':
     prompt_char: "prompt_char"

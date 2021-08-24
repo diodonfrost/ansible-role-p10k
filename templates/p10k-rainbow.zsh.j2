@@ -185,9 +185,9 @@
   # The left end of right prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='{{ head_config[p10k_prompt_head]["first"] }}'
   # The left end of left prompt.
-  typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL={{ frame_config[p10k_prompt_frame]['FIRST_START_SYMBOL'] }}
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL='{{ tails_config[p10k_prompt_tails]["START_SYMBOL"] }}'
   # The right end of right prompt.
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_LAST_SEGMENT_END_SYMBOL={{ frame_config[p10k_prompt_frame]['LAST_START_SYMBOL'] }}
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_LAST_SEGMENT_END_SYMBOL='{{ tails_config[p10k_prompt_tails]["END_SYMBOL"] }}'
   # Left prompt terminator for lines without any segments.
   typeset -g POWERLEVEL9K_EMPTY_LINE_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=
 
