@@ -7,12 +7,4 @@
         name: "ansible-role-p10k"
       vars:
         zsh_plugin: "{{ lookup('env', 'zsh_plugin') | default('zsh', True) }}"
-        p10k_prompt_style: "{{ lookup('env', 'p10k_prompt_style') | default('lean', True) }}"
-        p10k_prompt_time: "{{ lookup('env', 'p10k_prompt_time') | default('24-hour', True) }}"
-        p10k_prompt_height: "{{ lookup('env', 'p10k_prompt_height') | default('two-lines', True) }}"
-        p10k_prompt_frame: "{{ lookup('env', 'p10k_prompt_frame') | default('left', True) }}"
-        p10k_prompt_connection: "{{ lookup('env', 'p10k_prompt_connection') | default('disconnected', True) }}"
-        p10k_prompt_connection_color: "{{ lookup('env', 'p10k_prompt_connection_color') | default('green', True) }}"
-        p10k_prompt_spacing: "{{ lookup('env', 'p10k_prompt_spacing') | default('compact', True) }}"
-        p10k_prompt_flow: "{{ lookup('env', 'p10k_prompt_flow') | default('concise', True) }}"
-        p10k_transient_prompt: "{{ lookup('env', 'p10k_transient_prompt') | default('no', True) }}"
+        p10k_prompt_style: "{{ lookup('env', 'p10k_prompt_style') | default('classic', True) }}"
