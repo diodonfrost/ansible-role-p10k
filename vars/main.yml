@@ -1,5 +1,11 @@
 ---
 # Global vars file for ansible-role-p10k
+p10k_style:
+  lean: 'lean'
+  classic: 'rainbow'
+  rainbow: 'rainbow'
+  pure: 'rainbow'
+
 p10k_path:
   zsh: '~/powerlevel10k'
   ohmyzsh: '~/.oh-my-zsh/custom/themes/powerlevel10k'
@@ -74,74 +80,6 @@ color_config:
   light: '242'
   dark: '240'
   darkest: ''
-
-separator_config:
-  angled:
-    segment:
-      left: '\uE0B0'
-      right: '\uE0B2'
-    subsegment:
-      left: '250F\uE0B1'
-      right: '250F\uE0B3'
-  vertical:
-    segment:
-      left: ''
-      right: ''
-    subsegment:
-      left: '250F\u2502'
-      right: '250F\u2502'
-  slanted:
-    segment:
-      left: '\uE0BC'
-      right: '\uE0BA'
-    subsegment:
-      left: '250F\u2571'
-      right: '250F\u2571'
-  round:
-    segment:
-      left: '\uE0B4'
-      right: '\uE0B6'
-    subsegment:
-      left: '250F\uE0B5'
-      right: '250F\uE0B7'
-
-frame_config:
-  'no':
-    FIRST_PREFIX: ""
-    NEWLINE_PREFIX: ""
-    LAST_PREFIX: ""
-    FIRST_SUFFIX: ""
-    NEWLINE_SUFFIX: ""
-    LAST_SUFFIX: ""
-    FIRST_START_SYMBOL: "' '"
-    LAST_START_SYMBOL: "' '"
-  'left':
-    FIRST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╭─'"
-    NEWLINE_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F├─'"
-    LAST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╰─'"
-    FIRST_SUFFIX: ""
-    NEWLINE_SUFFIX: ""
-    LAST_SUFFIX: ""
-    FIRST_START_SYMBOL: "' '"
-    LAST_START_SYMBOL: ""
-  'right':
-    FIRST_PREFIX: ""
-    NEWLINE_PREFIX: ""
-    LAST_PREFIX: ""
-    FIRST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╮'"
-    NEWLINE_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─┤'"
-    LAST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╯'"
-    FIRST_START_SYMBOL: ""
-    LAST_START_SYMBOL: "' '"
-  'full':
-    FIRST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╭─'"
-    NEWLINE_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F├─'"
-    LAST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╰─'"
-    FIRST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╮'"
-    NEWLINE_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─┤'"
-    LAST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╯'"
-    FIRST_START_SYMBOL: "' '"
-    LAST_START_SYMBOL: "' '"
 
 connection_config:
   disconnected: "' '"

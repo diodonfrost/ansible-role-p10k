@@ -1,0 +1,56 @@
+---
+
+frame_config:
+  'no':
+    FIRST_PREFIX: ""
+    NEWLINE_PREFIX: ""
+    LAST_PREFIX: ""
+    FIRST_SUFFIX: ""
+    NEWLINE_SUFFIX: ""
+    LAST_SUFFIX: ""
+    FIRST_START_SYMBOL: "' '"
+    LAST_START_SYMBOL: "' '"
+  'left':
+    FIRST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╭─'"
+    NEWLINE_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F├─'"
+    LAST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╰─'"
+    FIRST_SUFFIX: ""
+    NEWLINE_SUFFIX: ""
+    LAST_SUFFIX: ""
+    FIRST_START_SYMBOL: "' '"
+    LAST_START_SYMBOL: ""
+  'right':
+    FIRST_PREFIX: ""
+    NEWLINE_PREFIX: ""
+    LAST_PREFIX: ""
+    FIRST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╮'"
+    NEWLINE_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─┤'"
+    LAST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╯'"
+    FIRST_START_SYMBOL: ""
+    LAST_START_SYMBOL: "' '"
+  'full':
+    FIRST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╭─'"
+    NEWLINE_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F├─'"
+    LAST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╰─'"
+    FIRST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╮'"
+    NEWLINE_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─┤'"
+    LAST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╯'"
+    FIRST_START_SYMBOL: "' '"
+    LAST_START_SYMBOL: "' '"
+
+connection_config:
+  disconnected: "' '"
+  dotted: "'.'"
+  solid: "'─'"
+
+spacing_config:
+  compact: 'true'
+  sparse: 'false'
+
+flow_config:
+  concise: '  #'
+  fluent: ' '
+
+transient_config:
+  'yes': 'always'
+  'no':  'off'

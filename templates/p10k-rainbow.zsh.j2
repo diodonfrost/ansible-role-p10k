@@ -41,9 +41,9 @@
 {% if p10k_prompt_height == "two-lines" %}
     # =========================[ Line #2 ]=========================
     newline                 # \n
-    prompt_char             # prompt symbol
+    {{ frame_config[p10k_prompt_frame]['prompt_char'] }}           # prompt symbol
 {% else %}
-    prompt_char             # prompt symbol
+    {{ frame_config[p10k_prompt_frame]['prompt_char'] }}           # prompt symbol
 {% endif %}
   )
 
@@ -170,24 +170,24 @@
   fi
 
   # Default background color.
-  typeset -g POWERLEVEL9K_BACKGROUND=240
+  typeset -g POWERLEVEL9K_BACKGROUND=236
 
   # Separator between same-color segments on the left.
-  typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%250F\uE0B1'
+  typeset -g POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR='%{{ separator_config[p10k_prompt_separator]["subsegment"]["left"] }}'
   # Separator between same-color segments on the right.
-  typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='%250F\uE0B3'
+  typeset -g POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR='%{{ separator_config[p10k_prompt_separator]["subsegment"]["right"] }}'
   # Separator between different-color segments on the left.
-  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\uE0B0'
+  typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='{{ separator_config[p10k_prompt_separator]["segment"]["left"] }}'
   # Separator between different-color segments on the right.
-  typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='\uE0B2'
+  typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='{{ separator_config[p10k_prompt_separator]["segment"]["right"] }}'
   # The right end of left prompt.
-  typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='\uE0B4'
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='{{ head_config[p10k_prompt_head]["last"] }}'
   # The left end of right prompt.
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='\uE0B6'
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL='{{ head_config[p10k_prompt_head]["first"] }}'
   # The left end of left prompt.
-  typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL=''
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_FIRST_SEGMENT_START_SYMBOL={{ frame_config[p10k_prompt_frame]['FIRST_START_SYMBOL'] }}
   # The right end of right prompt.
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_LAST_SEGMENT_END_SYMBOL=''
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_LAST_SEGMENT_END_SYMBOL={{ frame_config[p10k_prompt_frame]['LAST_START_SYMBOL'] }}
   # Left prompt terminator for lines without any segments.
   typeset -g POWERLEVEL9K_EMPTY_LINE_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL=
 

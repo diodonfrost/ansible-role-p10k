@@ -4,6 +4,9 @@
 - name: Include OS specific variables.
   include_vars: "{{ ansible_system }}.yml"
 
+- name: Include p10k prompt style variables.
+  include_vars: "{{ p10k_style[p10k_prompt_style] }}.yml"
+
 - name: Install p10k
   include_tasks: "p10k-install.yml"
 
