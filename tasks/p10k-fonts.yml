@@ -5,9 +5,13 @@
     mode: '0755'
     state: directory
 
-- name: Download powerlevel10k recommanded fonts
-  get_url:
-    url: "{{ item.url }}"
-    dest: "{{ fonts_path }}/{{ item.name }}"
+- name: Copy powerlevel10k recommanded fonts
+  copy:
+    src: "fonts/{{ item }}"
+    dest: "{{ fonts_path }}/{{ item }}"
     mode: '0644'
-  loop: "{{ p10k_font_urls }}"
+  loop:
+    - MesloLGS NF Bold Italic.ttf
+    - MesloLGS NF Bold.ttf
+    - MesloLGS NF Italic.ttf
+    - MesloLGS NF Regular.ttf
