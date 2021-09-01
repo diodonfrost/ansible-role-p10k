@@ -32,16 +32,25 @@ p10k_users:
 # All plugin names can be found here https://github.com/romkatv/powerlevel10k#installation
 zsh_plugin: zsh
 
-# Download p10k recommanded fonts from this urls
-p10k_font_urls:
-  - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf', name: 'Hack-Italic.ttf' }
-  - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf', name: 'Hack-Bold.ttf' }
-  - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf', name: 'Hack-BoldItalic.ttf' }
-  - { url: 'https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf', name: 'Hack-Regular.ttf' }
+# Setup p10k theme to use
+# Valid values: lean, classic, rainbow, pure
+p10k_prompt_style: "classic"
 
 # Show current time
-# Valid values: no, 24-hour
-p10k_prompt_time: "no"
+# Valid values: no, 24-hour, 12-hour
+p10k_prompt_time: "24-hour"
+
+# Prompt sperator
+# Valid values: angled, vertical, slanted, round
+p10k_prompt_separator: "angled"
+
+# Prompt heads
+# Valid values: sharp, blurred, slanted, round
+p10k_prompt_head: "sharp"
+
+# Prompt tails
+# Valid values: flat, blurred, sharp, slanted, round
+p10k_prompt_tails: flat
 
 # Terminal prompt height
 # Valid values: one-line, two-lines
@@ -51,9 +60,15 @@ p10k_prompt_height: two-lines
 # Valid values: disconnected, dotted, solid
 p10k_prompt_connection: disconnected
 
-# Prompt connection color, only used if "p10k_prompt_connection" value is "dotted" or "solid"
-# Valid values: false, black, white, green, blue
-p10k_prompt_connection_color: "no"
+# Prompt connection color, only used if
+# "p10k_prompt_connection" value is "dotted" or "solid"
+# or "p10k_prompt_frame" is not "no"
+# Valid values: lightest, light, dark, darkest, black, white, green, blue
+p10k_prompt_connection_color: "dark"
+
+# Prompt frame connection
+# Valid values: no, left, right, full
+p10k_prompt_frame: left
 
 # Sparse prompt with an empty line before promp
 # Valid values: compact, sparse
