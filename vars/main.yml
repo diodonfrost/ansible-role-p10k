@@ -2,7 +2,7 @@
 # Global vars file for ansible-role-p10k
 p10k_style:
   lean: 'lean'
-  classic: 'rainbow'
+  classic: 'classic'
   rainbow: 'rainbow'
   pure: 'rainbow'
 
@@ -71,6 +71,37 @@ time_config:
     prompt: 'time'
     format: !unsafe '%D{%I:%M:%S %p}'
 
+head_config:
+  sharp:
+    last: '\uE0B0'
+    first: '\uE0B2'
+  blurred:
+    last: '▓▒░'
+    first: '░▒▓'
+  slanted:
+    last: '\uE0BC'
+    first: '\uE0BA'
+  round:
+    last: '\uE0B4'
+    first: '\uE0B6'
+
+tails_config:
+  'flat':
+    START_SYMBOL: ''
+    END_SYMBOL: ''
+  'blurred':
+    START_SYMBOL: '░▒▓'
+    END_SYMBOL: '▓▒░'
+  'sharp':
+    START_SYMBOL: '\uE0B2'
+    END_SYMBOL: '\uE0B0'
+  'slanted':
+    START_SYMBOL: '\uE0BA'
+    END_SYMBOL: '\uE0BC'
+  'round':
+    START_SYMBOL: '\uE0B6'
+    END_SYMBOL: '\uE0B4'
+
 color_config:
   black: '0'
   white: '7'
@@ -97,3 +128,54 @@ flow_config:
 transient_config:
   'yes': 'always'
   'no':  'off'
+
+prompt_style:
+  lean:
+  classic:
+    color_background: '236'
+  rainbow:
+    color_background: '236'
+  pure:
+    color_background: '236'
+
+frame_config:
+  'no':
+    prompt_char: "prompt_char"
+    FIRST_PREFIX: ""
+    NEWLINE_PREFIX: ""
+    LAST_PREFIX: ""
+    FIRST_SUFFIX: ""
+    NEWLINE_SUFFIX: ""
+    LAST_SUFFIX: ""
+    FIRST_START_SYMBOL: "' '"
+    LAST_START_SYMBOL: "' '"
+  'left':
+    prompt_char: "# prompt_char"
+    FIRST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╭─'"
+    NEWLINE_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F├─'"
+    LAST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╰─'"
+    FIRST_SUFFIX: ""
+    NEWLINE_SUFFIX: ""
+    LAST_SUFFIX: ""
+    FIRST_START_SYMBOL: "''"
+    LAST_START_SYMBOL: "''"
+  'right':
+    prompt_char: "prompt_char"
+    FIRST_PREFIX: ""
+    NEWLINE_PREFIX: ""
+    LAST_PREFIX: ""
+    FIRST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╮'"
+    NEWLINE_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─┤'"
+    LAST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╯'"
+    FIRST_START_SYMBOL: ""
+    LAST_START_SYMBOL: "' '"
+  'full':
+    prompt_char: "# prompt_char"
+    FIRST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╭─'"
+    NEWLINE_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F├─'"
+    LAST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╰─'"
+    FIRST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╮'"
+    NEWLINE_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─┤'"
+    LAST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╯'"
+    FIRST_START_SYMBOL: "' '"
+    LAST_START_SYMBOL: "' '"
