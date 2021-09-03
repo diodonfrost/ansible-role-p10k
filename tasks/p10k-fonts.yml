@@ -1,11 +1,13 @@
 ---
 - name: Create fonts directory
+  become: true
   file:
     path: "{{ fonts_path }}"
     mode: '0755'
     state: directory
 
 - name: Copy powerlevel10k recommanded fonts
+  become: true
   copy:
     src: "fonts/{{ item }}"
     dest: "{{ fonts_path }}/{{ item }}"
