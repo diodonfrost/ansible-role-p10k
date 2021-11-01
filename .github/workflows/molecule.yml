@@ -10,6 +10,8 @@ jobs:
   build:
     name: ${{ matrix.image }} zsh_plugin ${{ matrix.zsh_plugin }}
     runs-on: ubuntu-18.04
+    env:
+      docker_namepsace: ghcr.io/diodonfrost/docker-ansible
     strategy:
       fail-fast: false
       matrix:
@@ -58,8 +60,9 @@ jobs:
       - name: Test Ansible role
         run: molecule test
         env:
+          namespace: ${{ env.docker_namepsace }}
           image: ansible-${{ matrix.image }}
-          zsh_plugin: ${{ matrix.terraform_version }}
+          packer_version: ${{ matrix.packer_version }}
 
       - name: Test Ansible role with check_mode enable
         run: molecule check

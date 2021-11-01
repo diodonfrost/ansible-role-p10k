@@ -9,7 +9,7 @@ driver:
   name: docker
 platforms:
   - name: default
-    image: diodonfrost/${image:-ansible-ubuntu:20.04}
+    image: ${namespace:-diodonfrost}/${image:-ansible-ubuntu:20.04}
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: yes
