@@ -50,8 +50,11 @@
         source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
       fi
     insertbefore: BOF
+    become: yes
+    become_user: "{{ item }}"
     marker_begin: "BEGIN P10K INSTANT PROMPT"
     marker_end: "END P10K INSTANT PROMPT"
+    with_items: "{{ p10k_users }}"
 
 - name: Enable powerlevel10k config file
   blockinfile:
@@ -59,5 +62,8 @@
     block: |
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     insertafter: EOF
+    become: yes
+    become_user: "{{ item }}"
     marker_begin: "BEGIN P10K CONFIG FILE"
     marker_end: "END P10K CONFIG FILE"
+    with_items: "{{ p10k_users }}"
