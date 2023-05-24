@@ -9,9 +9,11 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
+      - name: checkout
+        uses: actions/checkout@v3
       - name: Release to Ansible Galaxy
-        uses: robertdebock/galaxy-action@1.1.0
+        uses: robertdebock/galaxy-action@1.2.0
         with:
           galaxy_api_key: ${{ secrets.galaxy_api_key }}
