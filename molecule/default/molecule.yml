@@ -9,9 +9,11 @@ driver:
   name: docker
 platforms:
   - name: default
-    image: ${namespace:-diodonfrost}/${image:-ansible-ubuntu:20.04}
+    image: ${namespace:-diodonfrost}/${image:-ansible-ubuntu:22.04}
     volumes:
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /sys/fs/cgroup:/sys/fs/cgroup:rw
+      - /var/lib/containerd
+    cgroupns_mode: host
     privileged: yes
     pre_build_image: yes
 provisioner:
