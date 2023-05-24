@@ -9,48 +9,46 @@ on:
 jobs:
   build:
     name: ${{ matrix.image }} zsh_plugin ${{ matrix.zsh_plugin }}
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     env:
-      docker_namepsace: ghcr.io/diodonfrost/docker-ansible
+      docker_namespace: ghcr.io/diodonfrost/docker-ansible
     strategy:
       fail-fast: false
       matrix:
         image:
           - almalinux:8
           - rockylinux:8
-          - centos:8
-          - fedora:35
-          - fedora:34
-          - fedora:33
-          - fedora:32
-          - fedora:31
-          - fedora:30
-          - fedora:29
-          - fedora:28
-          - fedora:27
-          - fedora:26
+          - centos:stream9
+          - centos:stream8
+          - centos:7
+          - fedora:39
+          - fedora:38
+          - fedora:37
+          - fedora:36
+          - ubuntu:22.04
           - ubuntu:20.04
-          - ubuntu:18.04
-          - ubuntu:16.04
+          - debian:11
           - debian:10
-          - debian:9
+          - oraclelinux:9
           - oraclelinux:8
           - amazonlinux:2
           - opensuse:leap
           - opensuse:tumbleweed
           - archlinux:latest
+          - alpine:latest
+          - gentoo:latest
         zsh_plugin:
           - zsh
           - ohmyzsh
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.8
+          python-version: 3.9
 
       - name: Install Molecule
         run: |
@@ -60,12 +58,13 @@ jobs:
       - name: Test Ansible role
         run: molecule test
         env:
-          namespace: ${{ env.docker_namepsace }}
+          namespace: ${{ env.docker_namespace }}
           image: ansible-${{ matrix.image }}
-          packer_version: ${{ matrix.packer_version }}
+          zsh_plugin: ${{ matrix.zsh_plugin }}
 
       - name: Test Ansible role with check_mode enable
         run: molecule check
         env:
+          namespace: ${{ env.docker_namespace }}
           image: ansible-${{ matrix.image }}
-          zsh_plugin: ${{ matrix.terraform_version }}
+          zsh_plugin: ${{ matrix.zsh_plugin }}
