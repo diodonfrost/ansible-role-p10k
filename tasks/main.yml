@@ -2,7 +2,14 @@
 # tasks file for ansible-role-p10k
 
 - name: Include OS specific variables.
-  include_vars: "{{ ansible_system }}.yml"
+  include_vars: "{{ lookup('ansible.builtin.first_found', params) }}"
+  vars:
+    params:
+      files:
+        - "{{ ansible_system }}.yml"
+        - other-os.yml
+      paths:
+        - 'vars'
 
 - name: Include p10k prompt style variables.
   include_vars: "{{ p10k_style[p10k_prompt_style] }}.yml"
