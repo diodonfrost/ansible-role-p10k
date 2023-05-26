@@ -101,6 +101,7 @@ Install powerlevel10k for ohmyzsh:
 
     - hosts: servers
       roles:
+         - { role: diodonfrost.omyzsh, ohmyzsh_theme: powerlevel10k/powerlevel10k }
          - { role: diodonfrost.p10k, zsh_plugin: ohmyzsh }
 
 Local Testing
