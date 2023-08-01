@@ -52,6 +52,9 @@
     insertbefore: BOF
     marker_begin: "BEGIN P10K INSTANT PROMPT"
     marker_end: "END P10K INSTANT PROMPT"
+  become: yes
+  become_user: "{{ item }}"
+  with_items: "{{ p10k_users }}"
 
 - name: Enable powerlevel10k config file
   blockinfile:
@@ -61,3 +64,6 @@
     insertafter: EOF
     marker_begin: "BEGIN P10K CONFIG FILE"
     marker_end: "END P10K CONFIG FILE"
+  become: yes
+  become_user: "{{ item }}"
+  with_items: "{{ p10k_users }}"
