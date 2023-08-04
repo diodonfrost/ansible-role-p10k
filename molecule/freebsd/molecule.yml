@@ -2,10 +2,9 @@
 driver:
   name: vagrant
   provider:
-    name: VBox
+    name: libvirt
 platforms:
   - name: freebsd
-    box: generic/freebsd12
-    box_version: "3.0.18"
-    memory: 1024
+    box: generic/freebsd13
+    memory: 2048
     cpus: 2

@@ -117,30 +117,44 @@ To develop or test you'll need to have installed the following:
 * [Python](https://www.python.org/) (including python-pip)
 * [Ansible](https://www.ansible.com/)
 * [Molecule](http://molecule.readthedocs.io/)
+* [Libvirt](https://www.virtualbox.org/) (if you test windows system)
+* [Vagrant](https://www.vagrantup.com/downloads.html) (if you test windows system)
 
-### Testing with Docker ###
+Testing with Docker
+-------------------
 
 ```shell
 # Install requirements
 pip install -r requirements-dev.txt
 
-# Test ansible role with ubuntu 20.04
+# Test ansible role with ubuntu 22.04
 molecule test
 
-# Test ansible role with centos 8
-image=ansible-centos:8 molecule test
+# Test ansible role with ubuntu 20.04
+image=ansible-ubuntu:20.04 molecule test
 
-# Test ansible role with archlinux latest
-image=ansible-archlinux:latest molecule test
+# Test ansible role with alpine latest
+image=ansible-alpine:latest molecule test
 
-# Create ubuntu 20.04 instance
+# Create ubuntu 22.04 instance
 molecule create
 
-# Apply role on ubuntu 20.04 instance
+# Apply role on ubuntu 22.04 instance
 molecule converge
 
-# Launch tests on 20.04 instance
+# Launch tests on ubuntu 22.04 instance
 molecule verify
+```
+
+Testing with Vagrant and Libvirt
+--------------------------------
+
+```shell
+# Test ansible role with FreeBSD
+molecule test -s freebsd
+
+# Test ansible role with OpenBSD
+molecule test -s openbsd
 ```
 
 License

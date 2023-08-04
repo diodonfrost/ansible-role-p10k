@@ -1,8 +1,8 @@
 ansible
+ansible-compat==3.0.2 # https://github.com/ansible-community/molecule-plugins/issues/176
 ansible-lint
-molecule-docker
-molecule-vagrant
+molecule[docker]
+molecule-plugins[vagrant]
 docker
 pre-commit
 python-vagrant
-pywinrm

@@ -2,9 +2,9 @@
 driver:
   name: vagrant
   provider:
-    name: VBox
+    name: libvirt
 platforms:
-  - name: linux
-    box: ubuntu/focal64
-    memory: 1024
+  - name: ubuntu-22.04
+    box: generic/ubuntu2204
+    memory: 2048
     cpus: 2

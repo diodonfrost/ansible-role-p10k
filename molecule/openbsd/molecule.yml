@@ -2,10 +2,9 @@
 driver:
   name: vagrant
   provider:
-    name: VBox
+    name: libvirt
 platforms:
   - name: openbsd
-    box: generic/openbsd6
-    box_version: "3.0.26"
-    memory: 1024
+    box: generic/openbsd7
+    memory: 2048
     cpus: 2
