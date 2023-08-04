@@ -3,47 +3,45 @@ galaxy_info:
   author: diodonfrost
   description: Ansible role for install powerlevel10k
   license: license Apache-2.0
-  min_ansible_version: 2.8
+  min_ansible_version: "2.10"
 
   platforms:
     - name: EL
       versions:
-        - 8
+        - "9"
+        - "8"
+        - "7"
     - name: Fedora
       versions:
         - all
     - name: Debian
       versions:
+        - bookworm
+        - bullseye
         - buster
-        - stretch
     - name: Ubuntu
       versions:
         - focal
         - bionic
         - xenial
-    - name: Amazon
+    - name: Amazon Linux
       versions:
-        - 2017.12
+        - all
     - name: opensuse
       versions:
-        - 15.2
-        - 15.1
-        - 15.0
+        - all
     - name: ArchLinux
       versions:
-        - any
+        - all
     - name: MacOSX
       versions:
         - all
     - name: FreeBSD
       versions:
-        - 11.2
-        - 10.4
-        - 10.3
+        - all
     - name: OpenBSD
       versions:
-        - 6.0
-        - 6.4
+        - all
 
   galaxy_tags:
     - zsh
