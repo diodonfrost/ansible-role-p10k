@@ -18,25 +18,17 @@ jobs:
         image:
           - almalinux:8
           - rockylinux:8
-          - centos:stream9
           - centos:stream8
-          - centos:7
           - fedora:39
           - fedora:38
-          - fedora:37
-          - fedora:36
           - ubuntu:22.04
           - ubuntu:20.04
+          - debian:12
           - debian:11
-          - debian:10
-          - oraclelinux:9
           - oraclelinux:8
           - amazonlinux:2
           - opensuse:leap
-          - opensuse:tumbleweed
           - archlinux:latest
-          - alpine:latest
-          - gentoo:latest
         zsh_plugin:
           - zsh
           - ohmyzsh
