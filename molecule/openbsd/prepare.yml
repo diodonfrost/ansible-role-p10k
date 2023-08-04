@@ -5,4 +5,4 @@
   gather_facts: no
   tasks:
     - name: OpenBSD | Install Ansible requirements  # noqa 301
-      raw: pkg_add -z python-3.6.6 unzip-6
+      ansible.builtin.raw: pkg_add -z python-3.6.6 unzip-6

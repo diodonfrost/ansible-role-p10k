@@ -1,16 +1,16 @@
 ---
 - name: Set zsh as default shell
-  user:
+  ansible.builtin.user:
     name: "{{ item }}"
     shell: "{{ zsh_bin_path }}"
-  become: yes
+  become: true
   with_items: "{{ p10k_users }}"
 
 - name: Setup powerlevel10k
-  template:
+  ansible.builtin.template:
     src: "p10k-{{ p10k_style[p10k_prompt_style] }}.zsh.j2"
     dest: '~/.p10k.zsh'
     mode: '0644'
-  become: yes
+  become: true
   become_user: "{{ item }}"
   with_items: "{{ p10k_users }}"
