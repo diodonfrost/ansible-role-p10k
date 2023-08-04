@@ -9,6 +9,9 @@ p10k_repository_url: 'https://github.com/romkatv/powerlevel10k.git'
 p10k_users:
   - "{{ ansible_user_id }}"
 
+# Path to the .zshrc
+zshrc: ~/.zshrc
+
 # Zsh plugin used, zsh, ohmyzsh, prezto, Zim, etc..
 # All plugin names can be found here https://github.com/romkatv/powerlevel10k#installation
 zsh_plugin: zsh

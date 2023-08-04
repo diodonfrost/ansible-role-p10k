@@ -22,11 +22,11 @@ p10k_zshrc_config:
   zsh:
    regexp: '^source '
    line: 'source ~/powerlevel10k/powerlevel10k.zsh-theme'
-   zsh_file: ~/.zshrc
+   zsh_file: "{{ zshrc }}"
   ohmyzsh:
     regexp: '^ZSH_THEME='
     line: 'ZSH_THEME="powerlevel10k/powerlevel10k"'
-    zsh_file: ~/.zshrc
+    zsh_file: "{{ zshrc }}"
   prezto:
     regexp: '^zstyle :prezto:module:prompt theme'
     line: 'zstyle :prezto:module:prompt theme powerlevel10k'
@@ -38,27 +38,27 @@ p10k_zshrc_config:
   antibody:
     regexp: '^antibody bundle '
     line: 'antibody bundle romkatv/powerlevel10k'
-    zsh_file: ~/.zshrc
+    zsh_file: "{{ zshrc }}"
   antigen:
     regexp: '^antigen theme '
     line: 'antigen theme romkatv/powerlevel10k'
-    zsh_file: ~/.zshrc
+    zsh_file: "{{ zshrc }}"
   zplug:
     regexp: '^zplug '
     line: 'zplug romkatv/powerlevel10k, as:theme, depth:1'
-    zsh_file: ~/.zshrc
+    zsh_file: "{{ zshrc }}"
   zgen:
     regexp: '^zgen load '
     line: 'zgen load romkatv/powerlevel10k powerlevel10k'
-    zsh_file: ~/.zshrc
+    zsh_file: "{{ zshrc }}"
   zplugin:
     regexp: '^zplugin ice depth=1; zplugin light'
     line: 'zplugin ice depth=1; zplugin light romkatv/powerlevel10k'
-    zsh_file: ~/.zshrc
+    zsh_file: "{{ zshrc }}"
   zinit:
     regexp: '^zinit ice depth=1; zinit light'
     line: 'zinit ice depth=1; zinit light romkatv/powerlevel10k'
-    zsh_file: ~/.zshrc
+    zsh_file: "{{ zshrc }}"
 
 time_config:
   no:
