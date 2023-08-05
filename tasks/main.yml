@@ -6,6 +6,7 @@
   vars:
     params:
       files:
+        - "{{ ansible_os_family }}.yml"
         - "{{ ansible_system }}.yml"
         - other-os.yml
       paths:
