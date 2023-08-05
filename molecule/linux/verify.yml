@@ -3,26 +3,27 @@
   hosts: all
   become: yes
   tasks:
-    - name: Get custom ansible role variables
+    - name: Linux | Get custom ansible role variables
       ansible.builtin.set_fact:
         zsh_plugin: "{{ lookup('env', 'zsh_plugin') | default('zsh', True) }}"
         p10k_path:
           zsh: '~/powerlevel10k'
           ohmyzsh: '~/.oh-my-zsh/custom/themes/powerlevel10k'
 
-    - name: Linux | p10k config file should be present
+    - name: Linux | Check p10k config file and theme file for all users
       ansible.builtin.stat:
-        path: ~/.p10k.zsh
+        path: "{{ item.path }}"
       register: p10k_configfile_result
-
-    - name: Linux | p10k theme file should be present
-      ansible.builtin.stat:
-        path: "{{ p10k_path[zsh_plugin] }}"
-      register: p10k_themefile_result
+      loop:
+        - { path: "~/.p10k.zsh", user: "root" }
+        - { path: "~/.p10k.zsh", user: "foo" }
+        - { path: "~/.p10k.zsh", user: "bar" }
+        - { path: "{{ p10k_path[zsh_plugin] }}", user: "root" }
+        - { path: "{{ p10k_path[zsh_plugin] }}", user: "foo" }
+        - { path: "{{ p10k_path[zsh_plugin] }}", user: "bar" }
 
     - name: Linux | Verify commands outputs
       ansible.builtin.assert:
         that:
-          - p10k_configfile_result.stat.exists
-          - p10k_themefile_result.stat.exists
+          - p10k_configfile_result.results | map(attribute='stat.exists') | list == [true] * 6
         success_msg: "All tests passed"

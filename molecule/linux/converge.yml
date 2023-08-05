@@ -9,3 +9,7 @@
       vars:
         zsh_plugin: "{{ lookup('env', 'zsh_plugin') | default('zsh', True) }}"
         p10k_prompt_style: "{{ lookup('env', 'p10k_prompt_style') | default('classic', True) }}"
+        p10k_users:
+          - root
+          - foo
+          - bar

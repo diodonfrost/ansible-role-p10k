@@ -4,5 +4,12 @@
   become: yes
   gather_facts: no
   tasks:
-    - name: OpenBSD | Install Ansible requirements  # noqa 301
+    - name: OpenBSD | Install Ansible requirements  # noqa no-changed-when
       ansible.builtin.raw: pkg_add -z python-3.6.6 unzip-6
+
+    - name: OpenBSD | Create test users
+      ansible.builtin.user:
+        name: "{{ item }}"
+      loop:
+        - foo
+        - bar

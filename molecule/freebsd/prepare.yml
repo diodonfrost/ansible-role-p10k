@@ -7,3 +7,10 @@
       community.general.pkgng:
         name: gtar
         state: present
+
+    - name: FreeBSD | Create test users
+      ansible.builtin.user:
+        name: "{{ item }}"
+      loop:
+        - foo
+        - bar
