@@ -5,6 +5,10 @@ driver:
     name: libvirt
 platforms:
   - name: freebsd
-    box: generic/freebsd13
-    memory: 2048
+    box: generic/freebsd14
+    memory: 4096
     cpus: 2
+provisioner:
+  name: ansible
+verifier:
+  name: ansible

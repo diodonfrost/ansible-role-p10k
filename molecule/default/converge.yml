@@ -1,10 +1,8 @@
 ---
 - name: Converge
   hosts: all
-  tasks:
-    - name: "Include ansible-role-p10k"
-      ansible.builtin.include_role:
-        name: "ansible-role-p10k"
+  roles:
+    - role: diodonfrost.p10k
       vars:
         zsh_plugin: "{{ lookup('env', 'zsh_plugin') | default('zsh', True) }}"
         p10k_prompt_style: "{{ lookup('env', 'p10k_prompt_style') | default('classic', True) }}"

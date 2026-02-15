@@ -1,11 +1,11 @@
 ---
 - name: Prepare
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
   tasks:
-    - name: OpenBSD | Install Ansible requirements  # noqa no-changed-when
-      ansible.builtin.raw: pkg_add -z python-3.6.6 unzip-6
+    - name: OpenBSD | Install Ansible requirements
+      ansible.builtin.raw: pkg_add -z "python%3" unzip--
 
     - name: OpenBSD | Create test users
       ansible.builtin.user:

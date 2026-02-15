@@ -1,8 +1,5 @@
-ansible
-ansible-compat==3.0.2 # https://github.com/ansible-community/molecule-plugins/issues/176
-ansible-lint
-molecule[docker]
-molecule-plugins[vagrant]
-docker
-pre-commit
-python-vagrant
+ansible-compat == 25.*
+ansible-lint == 25.*
+molecule == 25.1.* # https://github.com/ansible-community/molecule-plugins/issues/301
+molecule-plugins[docker,vagrant] == 25.*
+pre_commit == 4.*

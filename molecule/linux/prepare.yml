@@ -1,12 +1,11 @@
 ---
 - name: Prepare
   hosts: all
-  become: yes
+  become: true
   tasks:
     - name: Ubuntu/Debian | refresh apt repository
       ansible.builtin.apt:
-        name: acl
-        update_cache: yes
+        update_cache: true
       when: ansible_pkg_mgr == "apt"
 
     - name: Linux | Create test users

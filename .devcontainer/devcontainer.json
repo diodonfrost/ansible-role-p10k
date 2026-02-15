@@ -1,0 +1,29 @@
+{
+  "build": { "dockerfile": "Dockerfile" },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.ansible",
+        "redhat.vscode-yaml",
+        "isudox.vscode-jetbrains-keybindings",
+        "vscode-icons-team.vscode-icons",
+        "GitHub.vscode-github-actions"
+      ],
+      "settings": {
+        // Fonts MesLGS NF should be install: https://github.com/romkatv/powerlevel10k-media/blob/master/MesloLGS%20NF%20Regular.ttf
+        "terminal.integrated.fontFamily": "MesloLGS NF",
+        "redhat.telemetry.enabled": false,
+        "workbench.iconTheme": "vscode-icons",
+        "vsicons.dontShowNewVersionMessage": true
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postStartCommand": "pip install -r requirements-dev.txt",
+  "remoteEnv": { "PATH": "${containerEnv:PATH}:/home/vscode/.local/bin" },
+  "remoteUser": "vscode"
+}

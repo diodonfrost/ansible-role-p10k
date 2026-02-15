@@ -4,7 +4,11 @@ driver:
   provider:
     name: libvirt
 platforms:
-  - name: ubuntu-22.04
+  - name: p10k-ubuntu-22.04
     box: generic/ubuntu2204
-    memory: 2048
+    memory: 4096
     cpus: 2
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
