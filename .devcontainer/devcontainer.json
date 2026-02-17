@@ -23,7 +23,7 @@
     "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postStartCommand": "pip install -r requirements-dev.txt",
-  "remoteEnv": { "PATH": "${containerEnv:PATH}:/home/vscode/.local/bin" },
+  "postStartCommand": "python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt",
+  "remoteEnv": { "PATH": "${containerWorkspaceFolder}/.venv/bin:${containerEnv:PATH}:/home/vscode/.local/bin" },
   "remoteUser": "vscode"
 }
