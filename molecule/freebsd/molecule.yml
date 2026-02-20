@@ -4,7 +4,7 @@ driver:
   provider:
     name: libvirt
 platforms:
-  - name: freebsd
+  - name: p10k-freebsd
     box: generic/freebsd14
     memory: 4096
     cpus: 2

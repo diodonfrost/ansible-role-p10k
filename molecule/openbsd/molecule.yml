@@ -4,7 +4,7 @@ driver:
   provider:
     name: libvirt
 platforms:
-  - name: openbsd
+  - name: p10k-openbsd
     box: pygolo/openbsd7
     memory: 4096
     cpus: 2
@@ -12,5 +12,5 @@ provisioner:
   name: ansible
   inventory:
     host_vars:
-      openbsd:
+      p10k-openbsd:
         ansible_python_interpreter: /usr/local/bin/python3
