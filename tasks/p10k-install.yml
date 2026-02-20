@@ -5,7 +5,7 @@
     name: "{{ p10k_dependencies }}"
     state: present
   become: true
-  when: p10k_dependencies
+  when: p10k_dependencies | default([]) | length > 0
 
 - name: Get ZSH version
   ansible.builtin.shell: "set -o pipefail; zsh --version | cut -d ' ' -f2 | cut -c1-3"
