@@ -16,19 +16,18 @@ jobs:
       fail-fast: false
       matrix:
         image:
-          - almalinux:8
-          - rockylinux:8
-          - centos:stream8
-          - fedora:39
-          - fedora:38
-          - ubuntu:22.04
-          - ubuntu:20.04
+          - almalinux:10
+          - rockylinux:9
+          - oraclelinux:10
+          - amazonlinux:2023
+          - fedora:43
+          - debian:13
           - debian:12
-          - debian:11
-          - oraclelinux:8
-          - amazonlinux:2
-          - opensuse:leap
+          - ubuntu:26.04
+          - ubuntu:24.04
+          - opensuse:16.0
           - archlinux:latest
+          - alpine:latest
         zsh_plugin:
           - zsh
           - ohmyzsh
