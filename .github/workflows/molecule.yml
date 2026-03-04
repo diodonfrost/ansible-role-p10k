@@ -11,7 +11,7 @@ jobs:
     name: ${{ matrix.image }} zsh_plugin ${{ matrix.zsh_plugin }}
     runs-on: ubuntu-latest
     env:
-      docker_namespace: ghcr.io/diodonfrost/docker-ansible
+      docker_namespace: ghcr.io/diodonfrost
     strategy:
       fail-fast: false
       matrix:
