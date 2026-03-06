@@ -6,8 +6,8 @@
   vars:
     params:
       files:
-        - "{{ ansible_os_family }}.yml"
-        - "{{ ansible_system }}.yml"
+        - "{{ ansible_facts['os_family'] }}.yml"
+        - "{{ ansible_facts['system'] }}.yml"
         - other-os.yml
       paths:
         - 'vars'
