@@ -5,7 +5,7 @@
     - name: Ubuntu/Debian | refresh apt repository
       ansible.builtin.apt:
         update_cache: true
-      when: ansible_pkg_mgr == "apt"
+      when: ansible_facts['pkg_mgr'] == "apt"
 
     - name: Linux | Create test users
       ansible.builtin.user:
