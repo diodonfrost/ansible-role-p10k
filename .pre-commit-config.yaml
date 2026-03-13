@@ -1,9 +1,20 @@
----
+exclude: 'CHANGELOG.md|tests'
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
+      - id: check-added-large-files
       - id: check-case-conflict
       - id: check-merge-conflict
+  - repo: https://github.com/ansible/ansible-lint
+    rev: v25.6.1
+    hooks:
+      - id: ansible-lint
+        entry: python3 -m ansiblelint -v --force-color --exclude tests/ --exclude .github/ --exclude verify.yml
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.37.1
+    hooks:
+      - id: yamllint
+        types: [file, yaml]

@@ -1,0 +1,7 @@
+---
+exclude_paths:
+  - .github/
+  - .venv/
+
+skip_list:
+  - galaxy[version-missing]
