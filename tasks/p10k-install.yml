@@ -11,7 +11,7 @@
   ansible.builtin.shell: "set -o pipefail; zsh --version | cut -d ' ' -f2 | cut -c1-3"
   args:
     executable: /bin/bash
-  check_mode: no
+  check_mode: false
   changed_when: false
   register: zsh_version
 
@@ -38,7 +38,7 @@
     repo: "{{ p10k_repository_url }}"
     dest: "{{ item['home'] }}/{{ p10k_path[zsh_plugin] | default('~/powerlevel10k', True) }}"
     depth: '1'
-    update: no
+    update: false
     version: 'master'
   loop: "{{ p10k_users_information }}"
 
@@ -47,7 +47,7 @@
     path: "{{ item['home'] }}/{{ p10k_path[zsh_plugin] | default('~/powerlevel10k', True) }}"
     owner: "{{ item['name'] }}"
     group: "{{ item['group'] }}"
-    recurse: yes
+    recurse: true
   loop: "{{ p10k_users_information }}"
 
 - name: Add powerlevel10k to zsh plugin
@@ -58,7 +58,7 @@
     owner: "{{ item['name'] }}"
     group: "{{ item['group'] }}"
     mode: '0644'
-    create: yes
+    create: true
   loop: "{{ p10k_users_information }}"
 
 - name: Enable powerlevel10 instant prompt
