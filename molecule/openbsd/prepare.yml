@@ -6,6 +6,7 @@
   tasks:
     - name: OpenBSD | Install Ansible requirements
       ansible.builtin.raw: pkg_add -z "python%3" unzip--
+      changed_when: true
 
     - name: OpenBSD | Create test users
       ansible.builtin.user:
