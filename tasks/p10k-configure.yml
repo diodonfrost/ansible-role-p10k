@@ -8,7 +8,7 @@
 
 - name: Setup powerlevel10k
   ansible.builtin.template:
-    src: "p10k-{{ p10k_style[p10k_prompt_style] }}.zsh.j2"
+    src: "p10k.zsh.j2"
     dest: "{{ item['home'] }}/.p10k.zsh"
     owner: "{{ item['name'] }}"
     group: "{{ item['group'] }}"

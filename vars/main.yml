@@ -179,3 +179,719 @@ frame_config:
     LAST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╯'"
     FIRST_START_SYMBOL: "' '"
     LAST_START_SYMBOL: "' '"
+
+style_config:
+  classic:
+    # Structural flags
+    has_background: true
+    has_ruler: false
+    has_vi_mode: true
+    git_formatter_has_loading: true
+    icon_before_content: ''
+    prompt_char_uses_frame: true
+    prefix_color: '%246F'
+    status_ok: 'true'
+    status_error: 'true'
+    dir_show_writable: 'v3'
+    context_root_bold: true
+    prompt_char_end_symbol: ''
+    # Prompt char
+    prompt_char_ok_foreground: '76'
+    prompt_char_error_foreground: '196'
+    # OS icon
+    os_icon_foreground: '255'
+    # Dir
+    dir_foreground: '31'
+    dir_shortened_foreground: '103'
+    dir_anchor_foreground: '39'
+    dir_anchor_bold: 'true'
+    # Dir classes example colors (commented out in template)
+    dir_classes_foreground: '31'
+    dir_classes_shortened_foreground: '103'
+    dir_classes_anchor_foreground: '39'
+    # Dir prefix
+    dir_prefix_color: '%246F'
+    # Git formatter
+    git_meta: "'%246F'"
+    git_clean: "'%76F'"
+    git_modified: "'%178F'"
+    git_untracked: "'%39F'"
+    git_conflicted: "'%196F'"
+    git_stale: "'%244F'"
+    git_meta_comment: 'grey foreground'
+    git_clean_comment: 'green foreground'
+    git_modified_comment: 'yellow foreground'
+    git_untracked_comment: 'blue foreground'
+    git_conflicted_comment: 'red foreground'
+    git_stale_comment: 'grey foreground'
+    # VCS
+    vcs_visual_identifier_color: '76'
+    vcs_loading_visual_identifier_color: '244'
+    vcs_clean_foreground: '76'
+    vcs_untracked_foreground: '76'
+    vcs_modified_foreground: '178'
+    # Status
+    status_ok_foreground: '70'
+    status_ok_pipe_foreground: '70'
+    status_error_foreground: '160'
+    status_error_signal_foreground: '160'
+    status_error_pipe_foreground: '160'
+    # Command execution time
+    command_execution_time_foreground: '248'
+    # Background jobs
+    background_jobs_foreground: '37'
+    # Direnv
+    direnv_foreground: '178'
+    # Asdf
+    asdf_foreground: '66'
+    asdf_ruby_foreground: '168'
+    asdf_python_foreground: '37'
+    asdf_golang_foreground: '37'
+    asdf_nodejs_foreground: '70'
+    asdf_rust_foreground: '37'
+    asdf_dotnet_core_foreground: '134'
+    asdf_flutter_foreground: '38'
+    asdf_lua_foreground: '32'
+    asdf_java_foreground: '32'
+    asdf_perl_foreground: '67'
+    asdf_erlang_foreground: '125'
+    asdf_elixir_foreground: '129'
+    asdf_postgres_foreground: '31'
+    asdf_php_foreground: '99'
+    asdf_haskell_foreground: '172'
+    asdf_julia_foreground: '70'
+    # Nordvpn
+    nordvpn_foreground: '39'
+    # Ranger
+    ranger_foreground: '178'
+    # Nnn
+    nnn_foreground: '72'
+    # Xplr
+    xplr_foreground: '72'
+    # Vim shell
+    vim_shell_foreground: '34'
+    # Midnight commander
+    midnight_commander_foreground: '178'
+    # Nix shell
+    nix_shell_foreground: '74'
+    # Disk usage
+    disk_usage_normal_foreground: '35'
+    disk_usage_warning_foreground: '220'
+    disk_usage_critical_foreground: '160'
+    # Vi mode
+    vi_mode_normal_foreground: '106'
+    vi_mode_visual_foreground: '68'
+    vi_mode_overwrite_foreground: '172'
+    vi_mode_insert_foreground: '66'
+    # Ram
+    ram_foreground: '66'
+    # Swap
+    swap_foreground: '96'
+    # Load
+    load_normal_foreground: '66'
+    load_warning_foreground: '178'
+    load_critical_foreground: '166'
+    # Todo
+    todo_foreground: '110'
+    # Timewarrior
+    timewarrior_foreground: '110'
+    # Taskwarrior
+    taskwarrior_foreground: '74'
+    # Context
+    context_root_foreground: '178'
+    context_remote_foreground: '180'
+    context_foreground: '180'
+    # Virtualenv
+    virtualenv_foreground: '37'
+    # Anaconda
+    anaconda_foreground: '37'
+    # Pyenv
+    pyenv_foreground: '37'
+    # Goenv
+    goenv_foreground: '37'
+    # Nodenv
+    nodenv_foreground: '70'
+    # Nvm
+    nvm_foreground: '70'
+    # Nodeenv
+    nodeenv_foreground: '70'
+    # Node version
+    node_version_foreground: '70'
+    # Go version
+    go_version_foreground: '37'
+    # Rust version
+    rust_version_foreground: '37'
+    # Dotnet version
+    dotnet_version_foreground: '134'
+    # PHP version
+    php_version_foreground: '99'
+    # Laravel version
+    laravel_version_foreground: '161'
+    # Java version
+    java_version_foreground: '32'
+    # Package
+    package_foreground: '117'
+    # Rbenv
+    rbenv_foreground: '168'
+    # Rvm
+    rvm_foreground: '168'
+    # Fvm
+    fvm_foreground: '38'
+    # Luaenv
+    luaenv_foreground: '32'
+    # Jenv
+    jenv_foreground: '32'
+    # Plenv
+    plenv_foreground: '67'
+    # Phpenv
+    phpenv_foreground: '99'
+    # Scalaenv
+    scalaenv_foreground: '160'
+    # Haskell stack
+    haskell_stack_foreground: '172'
+    # Terraform
+    terraform_other_foreground: '38'
+    terraform_version_foreground: '38'
+    # Kubecontext
+    kubecontext_default_foreground: '134'
+    kubecontext_test_foreground: '28'
+    # AWS
+    aws_default_foreground: '208'
+    aws_test_foreground: '28'
+    # AWS EB
+    aws_eb_env_foreground: '70'
+    # Azure
+    azure_foreground: '32'
+    # Gcloud
+    gcloud_foreground: '32'
+    # Google app cred
+    google_app_cred_default_foreground: '32'
+    google_app_cred_test_foreground: '28'
+    # Public IP
+    public_ip_foreground: '94'
+    # VPN IP
+    vpn_ip_foreground: '81'
+    # IP
+    ip_foreground: '38'
+    ip_content_expansion: !unsafe "'${P9K_IP_RX_RATE:+%70F⇣$P9K_IP_RX_RATE }${P9K_IP_TX_RATE:+%215F⇡$P9K_IP_TX_RATE }%38F$P9K_IP_IP'"
+    # Proxy
+    proxy_foreground: '68'
+    # Battery
+    battery_low_foreground: '160'
+    battery_charging_foreground: '70'
+    battery_disconnected_foreground: '178'
+    # Wifi
+    wifi_foreground: '68'
+    wifi_example_fg: '68'
+    # Time
+    time_foreground: '66'
+    # Example
+    example_segment_args: "-f 208 -i '⭐' -t 'hello, %n'"
+    example_description: 'orange text greeting the user'
+    example_foreground: '208'
+    example_foreground_commented: true
+
+  lean:
+    # Structural flags
+    has_background: false
+    has_ruler: true
+    has_vi_mode: false
+    git_formatter_has_loading: true
+    icon_before_content: 'true'
+    prompt_char_uses_frame: false
+    prefix_color: '%f'
+    status_ok: 'false'
+    status_error: 'false'
+    dir_show_writable: 'v3'
+    context_root_bold: true
+    prompt_char_end_symbol: "''"
+    # Prompt char
+    prompt_char_ok_foreground: '2'
+    prompt_char_error_foreground: '1'
+    # OS icon
+    os_icon_foreground: ''
+    # Dir
+    dir_foreground: '4'
+    dir_shortened_foreground: '4'
+    dir_anchor_foreground: '4'
+    dir_anchor_bold: 'false'
+    # Dir classes example colors
+    dir_classes_foreground: '4'
+    dir_classes_shortened_foreground: '4'
+    dir_classes_anchor_foreground: '4'
+    # Dir prefix
+    dir_prefix_color: '%f'
+    # Git formatter
+    git_meta: "'%f'"
+    git_clean: "'%2F'"
+    git_modified: "'%3F'"
+    git_untracked: "'%4F'"
+    git_conflicted: "'%1F'"
+    git_stale: "'%f'"
+    git_meta_comment: 'default foreground'
+    git_clean_comment: 'green foreground'
+    git_modified_comment: 'yellow foreground'
+    git_untracked_comment: 'blue foreground'
+    git_conflicted_comment: 'red foreground'
+    git_stale_comment: 'default foreground'
+    # VCS
+    vcs_visual_identifier_color: '2'
+    vcs_loading_visual_identifier_color: ''
+    vcs_clean_foreground: '2'
+    vcs_untracked_foreground: '2'
+    vcs_modified_foreground: '3'
+    # Status
+    status_ok_foreground: '2'
+    status_ok_pipe_foreground: '2'
+    status_error_foreground: '1'
+    status_error_signal_foreground: '1'
+    status_error_pipe_foreground: '1'
+    # Command execution time
+    command_execution_time_foreground: '3'
+    # Background jobs
+    background_jobs_foreground: '1'
+    # Direnv
+    direnv_foreground: '3'
+    # Asdf
+    asdf_foreground: '6'
+    asdf_ruby_foreground: '1'
+    asdf_python_foreground: '6'
+    asdf_golang_foreground: '6'
+    asdf_nodejs_foreground: '2'
+    asdf_rust_foreground: '4'
+    asdf_dotnet_core_foreground: '5'
+    asdf_flutter_foreground: '4'
+    asdf_lua_foreground: '4'
+    asdf_java_foreground: '4'
+    asdf_perl_foreground: '6'
+    asdf_erlang_foreground: '1'
+    asdf_elixir_foreground: '5'
+    asdf_postgres_foreground: '6'
+    asdf_php_foreground: '5'
+    asdf_haskell_foreground: '3'
+    asdf_julia_foreground: '2'
+    # Nordvpn
+    nordvpn_foreground: '6'
+    # Ranger
+    ranger_foreground: '3'
+    # Nnn
+    nnn_foreground: '3'
+    # Xplr
+    xplr_foreground: '3'
+    # Vim shell
+    vim_shell_foreground: '3'
+    # Midnight commander
+    midnight_commander_foreground: '3'
+    # Nix shell
+    nix_shell_foreground: '4'
+    # Disk usage
+    disk_usage_normal_foreground: '2'
+    disk_usage_warning_foreground: '3'
+    disk_usage_critical_foreground: '1'
+    # Ram
+    ram_foreground: '2'
+    # Swap
+    swap_foreground: '3'
+    # Load
+    load_normal_foreground: '2'
+    load_warning_foreground: '3'
+    load_critical_foreground: '1'
+    # Todo
+    todo_foreground: '4'
+    # Timewarrior
+    timewarrior_foreground: '4'
+    # Taskwarrior
+    taskwarrior_foreground: '6'
+    # Context
+    context_root_foreground: '1'
+    context_remote_foreground: '7'
+    context_foreground: '7'
+    # Virtualenv
+    virtualenv_foreground: '6'
+    # Anaconda
+    anaconda_foreground: '6'
+    # Pyenv
+    pyenv_foreground: '6'
+    # Goenv
+    goenv_foreground: '6'
+    # Nodenv
+    nodenv_foreground: '2'
+    # Nvm
+    nvm_foreground: '2'
+    # Nodeenv
+    nodeenv_foreground: '2'
+    # Node version
+    node_version_foreground: '2'
+    # Go version
+    go_version_foreground: '6'
+    # Rust version
+    rust_version_foreground: '4'
+    # Dotnet version
+    dotnet_version_foreground: '5'
+    # PHP version
+    php_version_foreground: '5'
+    # Laravel version
+    laravel_version_foreground: '1'
+    # Java version
+    java_version_foreground: '4'
+    # Package
+    package_foreground: '6'
+    # Rbenv
+    rbenv_foreground: '1'
+    # Rvm
+    rvm_foreground: '1'
+    # Fvm
+    fvm_foreground: '4'
+    # Luaenv
+    luaenv_foreground: '4'
+    # Jenv
+    jenv_foreground: '4'
+    # Plenv
+    plenv_foreground: '6'
+    # Phpenv
+    phpenv_foreground: '5'
+    # Scalaenv
+    scalaenv_foreground: '1'
+    # Haskell stack
+    haskell_stack_foreground: '3'
+    # Terraform
+    terraform_other_foreground: '4'
+    terraform_version_foreground: '4'
+    # Kubecontext
+    kubecontext_default_foreground: '5'
+    kubecontext_test_foreground: '3'
+    # AWS
+    aws_default_foreground: '3'
+    aws_test_foreground: '2'
+    # AWS EB
+    aws_eb_env_foreground: '2'
+    # Azure
+    azure_foreground: '4'
+    # Gcloud
+    gcloud_foreground: '4'
+    # Google app cred
+    google_app_cred_default_foreground: '5'
+    google_app_cred_test_foreground: '3'
+    # Public IP
+    public_ip_foreground: '6'
+    # VPN IP
+    vpn_ip_foreground: '3'
+    # IP
+    ip_foreground: '4'
+    ip_content_expansion: !unsafe "'$P9K_IP_IP${P9K_IP_RX_RATE:+ %2F⇣$P9K_IP_RX_RATE}${P9K_IP_TX_RATE:+ %3F⇡$P9K_IP_TX_RATE}'"
+    # Proxy
+    proxy_foreground: '2'
+    # Battery
+    battery_low_foreground: '1'
+    battery_charging_foreground: '2'
+    battery_disconnected_foreground: '3'
+    # Wifi
+    wifi_foreground: '4'
+    wifi_example_fg: '4'
+    # Time
+    time_foreground: '6'
+    # Example
+    example_segment_args: "-f 2 -i '⭐' -t 'hello, %n'"
+    example_description: 'green text greeting the user'
+    example_foreground: '208'
+    example_foreground_commented: true
+
+  rainbow:
+    # Structural flags
+    has_background: true
+    has_ruler: false
+    has_vi_mode: true
+    git_formatter_has_loading: false
+    icon_before_content: ''
+    prompt_char_uses_frame: true
+    prefix_color: ''
+    status_ok: 'true'
+    status_error: 'true'
+    dir_show_writable: 'v3'
+    context_root_bold: false
+    prompt_char_end_symbol: ''
+    # Prompt char
+    prompt_char_ok_foreground: '76'
+    prompt_char_error_foreground: '196'
+    # OS icon
+    os_icon_foreground: '232'
+    os_icon_background: '7'
+    # Dir
+    dir_foreground: '254'
+    dir_background: '4'
+    dir_shortened_foreground: '250'
+    dir_anchor_foreground: '255'
+    dir_anchor_bold: 'true'
+    # Dir classes example colors
+    dir_classes_foreground: '254'
+    dir_classes_shortened_foreground: '250'
+    dir_classes_anchor_foreground: '255'
+    dir_classes_background: '4'
+    # Dir prefix
+    dir_prefix_color: ''
+    # Git formatter
+    git_meta: "'%7F'"
+    git_clean: "'%0F'"
+    git_modified: "'%0F'"
+    git_untracked: "'%0F'"
+    git_conflicted: "'%1F'"
+    git_meta_comment: 'white foreground'
+    git_clean_comment: 'black foreground'
+    git_modified_comment: 'black foreground'
+    git_untracked_comment: 'black foreground'
+    git_conflicted_comment: 'red foreground'
+    # VCS backgrounds (rainbow only)
+    vcs_clean_background: '2'
+    vcs_modified_background: '3'
+    vcs_untracked_background: '2'
+    vcs_conflicted_background: '3'
+    vcs_loading_background: '8'
+    # Status
+    status_ok_foreground: '2'
+    status_ok_background: '0'
+    status_ok_pipe_foreground: '2'
+    status_ok_pipe_background: '0'
+    status_error_foreground: '3'
+    status_error_background: '1'
+    status_error_signal_foreground: '3'
+    status_error_signal_background: '1'
+    status_error_pipe_foreground: '3'
+    status_error_pipe_background: '1'
+    # Command execution time
+    command_execution_time_foreground: '0'
+    command_execution_time_background: '3'
+    # Background jobs
+    background_jobs_foreground: '6'
+    background_jobs_background: '0'
+    # Direnv
+    direnv_foreground: '3'
+    direnv_background: '0'
+    # Asdf
+    asdf_foreground: '0'
+    asdf_background: '7'
+    asdf_ruby_foreground: '0'
+    asdf_ruby_background: '1'
+    asdf_python_foreground: '0'
+    asdf_python_background: '4'
+    asdf_golang_foreground: '0'
+    asdf_golang_background: '4'
+    asdf_nodejs_foreground: '0'
+    asdf_nodejs_background: '2'
+    asdf_rust_foreground: '0'
+    asdf_rust_background: '208'
+    asdf_dotnet_core_foreground: '0'
+    asdf_dotnet_core_background: '5'
+    asdf_flutter_foreground: '0'
+    asdf_flutter_background: '4'
+    asdf_lua_foreground: '0'
+    asdf_lua_background: '4'
+    asdf_java_foreground: '1'
+    asdf_java_background: '7'
+    asdf_perl_foreground: '0'
+    asdf_perl_background: '4'
+    asdf_erlang_foreground: '0'
+    asdf_erlang_background: '1'
+    asdf_elixir_foreground: '0'
+    asdf_elixir_background: '5'
+    asdf_postgres_foreground: '0'
+    asdf_postgres_background: '6'
+    asdf_php_foreground: '0'
+    asdf_php_background: '5'
+    asdf_haskell_foreground: '0'
+    asdf_haskell_background: '3'
+    asdf_julia_foreground: '0'
+    asdf_julia_background: '2'
+    # Nordvpn
+    nordvpn_foreground: '7'
+    nordvpn_background: '4'
+    # Ranger
+    ranger_foreground: '3'
+    ranger_background: '0'
+    # Nnn
+    nnn_foreground: '0'
+    nnn_background: '6'
+    # Xplr
+    xplr_foreground: '0'
+    xplr_background: '6'
+    # Vim shell
+    vim_shell_foreground: '0'
+    vim_shell_background: '2'
+    # Midnight commander
+    midnight_commander_foreground: '3'
+    midnight_commander_background: '0'
+    # Nix shell
+    nix_shell_foreground: '0'
+    nix_shell_background: '4'
+    # Disk usage
+    disk_usage_normal_foreground: '3'
+    disk_usage_normal_background: '0'
+    disk_usage_warning_foreground: '0'
+    disk_usage_warning_background: '3'
+    disk_usage_critical_foreground: '7'
+    disk_usage_critical_background: '1'
+    # Vi mode (rainbow uses backgrounds)
+    vi_mode_foreground: '0'
+    vi_mode_normal_background: '2'
+    vi_mode_visual_background: '4'
+    vi_mode_overwrite_background: '3'
+    vi_mode_insert_foreground: '8'
+    # Ram
+    ram_foreground: '0'
+    ram_background: '3'
+    # Swap
+    swap_foreground: '0'
+    swap_background: '3'
+    # Load
+    load_normal_foreground: '0'
+    load_normal_background: '2'
+    load_warning_foreground: '0'
+    load_warning_background: '3'
+    load_critical_foreground: '0'
+    load_critical_background: '1'
+    # Todo
+    todo_foreground: '0'
+    todo_background: '8'
+    # Timewarrior
+    timewarrior_foreground: '255'
+    timewarrior_background: '8'
+    # Taskwarrior
+    taskwarrior_foreground: '0'
+    taskwarrior_background: '6'
+    # Context
+    context_root_foreground: '1'
+    context_root_background: '0'
+    context_remote_foreground: '3'
+    context_remote_background: '0'
+    context_foreground: '3'
+    context_background: '0'
+    # Virtualenv
+    virtualenv_foreground: '0'
+    virtualenv_background: '4'
+    # Anaconda
+    anaconda_foreground: '0'
+    anaconda_background: '4'
+    # Pyenv
+    pyenv_foreground: '0'
+    pyenv_background: '4'
+    # Goenv
+    goenv_foreground: '0'
+    goenv_background: '4'
+    # Nodenv
+    nodenv_foreground: '2'
+    nodenv_background: '0'
+    # Nvm
+    nvm_foreground: '0'
+    nvm_background: '5'
+    # Nodeenv
+    nodeenv_foreground: '2'
+    nodeenv_background: '0'
+    # Node version
+    node_version_foreground: '7'
+    node_version_background: '2'
+    # Go version
+    go_version_foreground: '255'
+    go_version_background: '2'
+    # Rust version
+    rust_version_foreground: '0'
+    rust_version_background: '208'
+    # Dotnet version
+    dotnet_version_foreground: '7'
+    dotnet_version_background: '5'
+    # PHP version
+    php_version_foreground: '0'
+    php_version_background: '5'
+    # Laravel version
+    laravel_version_foreground: '1'
+    laravel_version_background: '7'
+    # Java version
+    java_version_foreground: '1'
+    java_version_background: '7'
+    # Package
+    package_foreground: '0'
+    package_background: '6'
+    # Rbenv
+    rbenv_foreground: '0'
+    rbenv_background: '1'
+    # Rvm
+    rvm_foreground: '0'
+    rvm_background: '240'
+    # Fvm
+    fvm_foreground: '0'
+    fvm_background: '4'
+    # Luaenv
+    luaenv_foreground: '0'
+    luaenv_background: '4'
+    # Jenv
+    jenv_foreground: '1'
+    jenv_background: '7'
+    # Plenv
+    plenv_foreground: '0'
+    plenv_background: '4'
+    # Phpenv
+    phpenv_foreground: '0'
+    phpenv_background: '5'
+    # Scalaenv
+    scalaenv_foreground: '0'
+    scalaenv_background: '1'
+    # Haskell stack
+    haskell_stack_foreground: '0'
+    haskell_stack_background: '3'
+    # Terraform
+    terraform_other_foreground: '4'
+    terraform_other_background: '0'
+    terraform_version_foreground: '4'
+    terraform_version_background: '0'
+    terraform_version_show_on_command: 'terraform|tf'
+    # Kubecontext
+    kubecontext_default_foreground: '7'
+    kubecontext_default_background: '5'
+    kubecontext_test_foreground: '0'
+    kubecontext_test_background: '2'
+    # AWS
+    aws_default_foreground: '7'
+    aws_default_background: '1'
+    aws_test_foreground: '28'
+    # AWS EB
+    aws_eb_env_foreground: '2'
+    aws_eb_env_background: '0'
+    # Azure
+    azure_foreground: '7'
+    azure_background: '4'
+    # Gcloud
+    gcloud_foreground: '7'
+    gcloud_background: '4'
+    # Google app cred
+    google_app_cred_default_foreground: '7'
+    google_app_cred_default_background: '4'
+    google_app_cred_test_foreground: '28'
+    # Public IP
+    public_ip_foreground: '7'
+    public_ip_background: '0'
+    # VPN IP
+    vpn_ip_foreground: '0'
+    vpn_ip_background: '6'
+    # IP
+    ip_foreground: '0'
+    ip_background: '4'
+    ip_content_expansion: !unsafe "'${P9K_IP_RX_RATE:+⇣$P9K_IP_RX_RATE }${P9K_IP_TX_RATE:+⇡$P9K_IP_TX_RATE }$P9K_IP_IP'"
+    # Proxy
+    proxy_foreground: '4'
+    proxy_background: '0'
+    # Battery
+    battery_low_foreground: '1'
+    battery_charging_foreground: '2'
+    battery_disconnected_foreground: '3'
+    battery_background: '0'
+    # Wifi
+    wifi_foreground: '0'
+    wifi_background: '4'
+    wifi_example_fg: '0'
+    # Time
+    time_foreground: '0'
+    time_background: '7'
+    # Example
+    example_segment_args: "-b 1 -f 3 -i '⭐' -t 'hello, %n'"
+    example_description: 'yellow text on red background greeting the user'
+    example_foreground: '3'
+    example_background: '1'
+    example_foreground_commented: false
