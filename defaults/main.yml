@@ -8,6 +8,10 @@ p10k_repository_url: 'https://github.com/romkatv/powerlevel10k.git'
 # Valid values: true, false
 p10k_update: false
 
+# Powerlevel10k version to install (branch, tag or commit hash)
+# Example: 'v1.20.0'
+p10k_version: 'master'
+
 # Install p10k for the following linux users
 # Default: the linux user running Ansible
 p10k_users:

@@ -37,7 +37,7 @@
     dest: "{{ item['home'] }}/{{ _p10k_path[zsh_plugin] | default('~/powerlevel10k') }}"
     depth: '1'
     update: "{{ p10k_update }}"
-    version: 'master'
+    version: "{{ p10k_version }}"
   loop: "{{ p10k_users_information }}"
 
 - name: Setup powerlevel10k file permissions.
