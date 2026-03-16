@@ -1,6 +1,6 @@
 ---
 
-frame_config:
+_frame_config:
   'no':
     FIRST_PREFIX: ""
     NEWLINE_PREFIX: ""
@@ -11,9 +11,9 @@ frame_config:
     FIRST_START_SYMBOL: "' '"
     LAST_START_SYMBOL: "' '"
   'left':
-    FIRST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╭─'"
-    NEWLINE_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F├─'"
-    LAST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╰─'"
+    FIRST_PREFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F╭─'"
+    NEWLINE_PREFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F├─'"
+    LAST_PREFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F╰─'"
     FIRST_SUFFIX: ""
     NEWLINE_SUFFIX: ""
     LAST_SUFFIX: ""
@@ -23,34 +23,34 @@ frame_config:
     FIRST_PREFIX: ""
     NEWLINE_PREFIX: ""
     LAST_PREFIX: ""
-    FIRST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╮'"
-    NEWLINE_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─┤'"
-    LAST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╯'"
+    FIRST_SUFFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F─╮'"
+    NEWLINE_SUFFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F─┤'"
+    LAST_SUFFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F─╯'"
     FIRST_START_SYMBOL: ""
     LAST_START_SYMBOL: "' '"
   'full':
-    FIRST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╭─'"
-    NEWLINE_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F├─'"
-    LAST_PREFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F╰─'"
-    FIRST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╮'"
-    NEWLINE_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─┤'"
-    LAST_SUFFIX: "'%{{ color_config[p10k_prompt_connection_color] }}F─╯'"
+    FIRST_PREFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F╭─'"
+    NEWLINE_PREFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F├─'"
+    LAST_PREFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F╰─'"
+    FIRST_SUFFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F─╮'"
+    NEWLINE_SUFFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F─┤'"
+    LAST_SUFFIX: "'%{{ _color_config[p10k_prompt_connection_color] }}F─╯'"
     FIRST_START_SYMBOL: "' '"
     LAST_START_SYMBOL: "' '"
 
-connection_config:
+_connection_config:
   disconnected: "' '"
   dotted: "'.'"
   solid: "'─'"
 
-spacing_config:
+_spacing_config:
   compact: 'true'
   sparse: 'false'
 
-flow_config:
+_flow_config:
   concise: '  #'
   fluent: ' '
 
-transient_config:
+_transient_config:
   'yes': 'always'
   'no':  'off'

@@ -5,7 +5,7 @@
     - name: Linux | Get custom ansible role variables
       ansible.builtin.set_fact:
         zsh_plugin: "{{ lookup('env', 'zsh_plugin') | default('zsh', True) }}"
-        p10k_path:
+        _p10k_path:
           zsh: '~/powerlevel10k'
           ohmyzsh: '~/.oh-my-zsh/custom/themes/powerlevel10k'
 
@@ -19,9 +19,9 @@
         - { path: "~/.p10k.zsh", user: "root" }
         - { path: "~/.p10k.zsh", user: "foo" }
         - { path: "~/.p10k.zsh", user: "bar" }
-        - { path: "{{ p10k_path[zsh_plugin] }}", user: "root" }
-        - { path: "{{ p10k_path[zsh_plugin] }}", user: "foo" }
-        - { path: "{{ p10k_path[zsh_plugin] }}", user: "bar" }
+        - { path: "{{ _p10k_path[zsh_plugin] }}", user: "root" }
+        - { path: "{{ _p10k_path[zsh_plugin] }}", user: "foo" }
+        - { path: "{{ _p10k_path[zsh_plugin] }}", user: "bar" }
 
     - name: Linux | Verify commands outputs
       ansible.builtin.assert:

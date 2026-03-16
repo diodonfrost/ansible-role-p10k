@@ -13,7 +13,7 @@
         - 'vars'
 
 - name: Include p10k prompt style variables.
-  ansible.builtin.include_vars: "{{ p10k_style[p10k_prompt_style] }}.yml"
+  ansible.builtin.include_vars: "{{ _p10k_style[p10k_prompt_style] }}.yml"
 
 - name: Install p10k
   ansible.builtin.include_tasks: "p10k-install.yml"

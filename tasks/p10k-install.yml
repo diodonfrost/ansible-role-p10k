@@ -2,10 +2,10 @@
 # Install powerlevel10k
 - name: Ensure dependencies are installed.
   ansible.builtin.package:
-    name: "{{ p10k_dependencies }}"
+    name: "{{ _p10k_dependencies }}"
     state: present
   become: true
-  when: p10k_dependencies | default([]) | length > 0
+  when: _p10k_dependencies | default([]) | length > 0
 
 - name: Get ZSH version
   ansible.builtin.shell: "set -o pipefail; zsh --version | cut -d ' ' -f2 | cut -c1-3"
@@ -36,7 +36,7 @@
 - name: Install powerlevel10k.
   ansible.builtin.git:
     repo: "{{ p10k_repository_url }}"
-    dest: "{{ item['home'] }}/{{ p10k_path[zsh_plugin] | default('~/powerlevel10k', True) }}"
+    dest: "{{ item['home'] }}/{{ _p10k_path[zsh_plugin] | default('~/powerlevel10k') }}"
     depth: '1'
     update: false
     version: 'master'
@@ -44,7 +44,7 @@
 
 - name: Setup powerlevel10k file permissions.
   ansible.builtin.file:
-    path: "{{ item['home'] }}/{{ p10k_path[zsh_plugin] | default('~/powerlevel10k', True) }}"
+    path: "{{ item['home'] }}/{{ _p10k_path[zsh_plugin] | default('~/powerlevel10k') }}"
     owner: "{{ item['name'] }}"
     group: "{{ item['group'] }}"
     recurse: true
@@ -52,9 +52,9 @@
 
 - name: Add powerlevel10k to zsh plugin
   ansible.builtin.lineinfile:
-    path: "{{ item['home'] }}/{{ p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
-    regexp: "{{ p10k_zshrc_config[zsh_plugin]['regexp'] }}"
-    line: "{{ p10k_zshrc_config[zsh_plugin]['line'] }}"
+    path: "{{ item['home'] }}/{{ _p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
+    regexp: "{{ _p10k_zshrc_config[zsh_plugin]['regexp'] }}"
+    line: "{{ _p10k_zshrc_config[zsh_plugin]['line'] }}"
     owner: "{{ item['name'] }}"
     group: "{{ item['group'] }}"
     mode: '0644'
@@ -63,7 +63,7 @@
 
 - name: Enable powerlevel10 instant prompt
   ansible.builtin.blockinfile:
-    path: "{{ item['home'] }}/{{ p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
+    path: "{{ item['home'] }}/{{ _p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
     owner: "{{ item['name'] }}"
     group: "{{ item['group'] }}"
     block: |
@@ -77,7 +77,7 @@
 
 - name: Enable powerlevel10k config file
   ansible.builtin.blockinfile:
-    path: "{{ item['home'] }}/{{ p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
+    path: "{{ item['home'] }}/{{ _p10k_zshrc_config[zsh_plugin]['zsh_file'] }}"
     owner: "{{ item['name'] }}"
     group: "{{ item['group'] }}"
     block: |

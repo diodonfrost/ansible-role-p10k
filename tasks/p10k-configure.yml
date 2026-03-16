@@ -2,7 +2,7 @@
 - name: Set zsh as default shell
   ansible.builtin.user:
     name: "{{ item }}"
-    shell: "{{ zsh_bin_path }}"
+    shell: "{{ _zsh_bin_path }}"
   become: true
   loop: "{{ p10k_users }}"
 

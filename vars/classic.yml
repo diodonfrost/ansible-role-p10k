@@ -1,5 +1,5 @@
 ---
-separator_config:
+_separator_config:
   angled:
     segment:
       left: '\uE0B0'
