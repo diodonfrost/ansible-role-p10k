@@ -40,7 +40,7 @@ p10k_prompt_style: "classic"
 # Valid values: no, 24-hour, 12-hour
 p10k_prompt_time: "24-hour"
 
-# Prompt sperator
+# Prompt separator
 # Valid values: angled, vertical, slanted, round
 p10k_prompt_separator: "angled"
 
@@ -70,7 +70,7 @@ p10k_prompt_connection_color: "dark"
 # Valid values: no, left, right, full
 p10k_prompt_frame: left
 
-# Sparse prompt with an empty line before promp
+# Sparse prompt with an empty line before prompt
 # Valid values: compact, sparse
 p10k_prompt_spacing: compact
 
@@ -81,6 +81,23 @@ p10k_prompt_flow: concise
 # Enable transient prompt
 # Valid values: yes, no
 p10k_transient_prompt: "no"
+
+# Powerlevel10k icon mode
+# Valid values: nerdfont-complete, nerdfont-v2, awesome-fontconfig,
+#               awesome-mapped-fontconfig, awesome-patched, compatible
+p10k_prompt_mode: nerdfont-complete
+
+# Icon padding
+# Valid values: none, moderate
+p10k_prompt_icon_padding: none
+
+# Instant prompt mode
+# Valid values: verbose, quiet, off
+p10k_instant_prompt: verbose
+
+# Custom fonts directory path
+# Default: OS-specific path (e.g. /usr/share/fonts/TTF on Linux, /Library/Fonts on macOS)
+p10k_fonts_path: "{{ _fonts_path }}"
 ```
 
 Dependencies

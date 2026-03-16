@@ -75,3 +75,7 @@ p10k_prompt_icon_padding: none
 # Instant prompt mode
 # Valid values: verbose, quiet, off
 p10k_instant_prompt: verbose
+
+# Custom fonts directory path
+# Default: OS-specific path (e.g. /usr/share/fonts/TTF on Linux, /Library/Fonts on macOS)
+p10k_fonts_path: "{{ _fonts_path }}"

@@ -1,7 +1,7 @@
 ---
 - name: Create fonts directory
   ansible.builtin.file:
-    path: "{{ _fonts_path }}"
+    path: "{{ p10k_fonts_path }}"
     mode: '0755'
     state: directory
   become: true
@@ -9,7 +9,7 @@
 - name: Copy powerlevel10k recommanded fonts
   ansible.builtin.copy:
     src: "fonts/{{ item }}"
-    dest: "{{ _fonts_path }}/{{ item }}"
+    dest: "{{ p10k_fonts_path }}/{{ item }}"
     mode: '0644'
   become: true
   loop:
