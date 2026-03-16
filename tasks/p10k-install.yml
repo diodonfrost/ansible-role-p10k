@@ -8,11 +8,9 @@
   when: _p10k_dependencies | default([]) | length > 0
 
 - name: Get ZSH version
-  ansible.builtin.shell: "set -o pipefail; zsh --version | cut -d ' ' -f2 | cut -c1-3"
-  args:
-    executable: /bin/bash
-  check_mode: false
+  ansible.builtin.shell: "zsh --version | cut -d ' ' -f2 | cut -c1-3"
   changed_when: false
+  check_mode: false
   register: zsh_version
 
 - name: Powerlevel10k works only with ZSH >= 5.1
