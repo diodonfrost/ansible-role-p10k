@@ -23,6 +23,10 @@ Available variables are listed below, along with default values (see `defaults/m
 # Powerlevel10k Git repository url
 p10k_repository_url: 'https://github.com/romkatv/powerlevel10k.git'
 
+# Update powerlevel10k to the latest version on each run
+# Valid values: true, false
+p10k_update: false
+
 # Install p10k for the following linux users
 # Default: the linux user running Ansible
 p10k_users:
