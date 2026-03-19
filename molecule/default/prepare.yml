@@ -1,12 +1,9 @@
 ---
 - name: Prepare
   hosts: all
+  roles:
+    - role: diodonfrost.update_package_manager_cache
   tasks:
-    - name: Ubuntu/Debian | refresh apt repository
-      ansible.builtin.apt:
-        update_cache: true
-      when: ansible_facts['pkg_mgr'] == "apt"
-
     - name: Linux | Create test users
       ansible.builtin.user:
         name: "{{ item }}"

@@ -1,7 +1,7 @@
 ---
 - name: Verify
   hosts: all
-  become: yes
+  become: true
   tasks:
     - name: OpenBSD | Get custom ansible role variables
       ansible.builtin.set_fact:
